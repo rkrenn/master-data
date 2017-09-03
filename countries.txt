@@ -1,0 +1,238 @@
+#http://www.zoll.de/....
+Andorra;AD
+Vereinigte Arabische Emirate;AE
+Afghanistan;AF
+Antigua und Barbuda;AG
+Anguilla;AI
+Albanien;AL
+Armenien;AM
+Niederländische Antillen;AN
+Angola;AO
+Antarktis;AQ
+Argentinien;AR
+Amerikanisch-Samoa;AS
+Österreich;AT
+Australien;AU
+Aruba;AW
+Aserbaidschan;AZ
+Bosnien und Herzogowina;BA
+Barbados;BB
+Bangladesch;BD
+Belgien;BE
+Burkina Faso;BF
+Bulgarien;BG
+Bahrain;BH
+Burundi;BI
+Benin;BJ
+Bermuda;BM
+Brunei Darussalam;BN
+Bolivien;BO
+Brasilien;BR
+Bahamas;BS
+Bhutan;BT
+Bouvetinsel;BV
+Botsuana;BW
+Belarus;BY
+Belize;BZ
+Kanada;CA
+Kokosinseln;CC
+Demokratische Republik Kongo;CD
+Zentralafrikanische Republik;CF
+Republik Kongo;CG
+Schweiz;CH
+Cote d'Ivoire;CI
+Cookinseln;CK
+Chile;CL
+Kamerun;CM
+Volksrepublik China;CN
+Kolumbien;CO
+Costa Rica;CR
+Kuba;CU
+Kap Verde;CV
+Weihnachtsinsel;CX
+Zypern;CY
+Tschechische Republik;CZ
+Deutschland;DE
+Dschibuti;DJ
+Dänemark;DK
+Dominica;DM
+Dominikanische Republik;DO
+Algerien;DZ
+Ecuador;EC
+Estland;EE
+Ägypten;EG
+Eritrea;ER
+Spanien;ES
+Äthiopien;ET
+Europäische Gemeinschaft;EU
+Finnland;FI
+Fidschi;FJ
+Falklandinseln;FK
+Föderierte Staaten von Mikronesien;FM
+Färöer;FO
+Frankreich;FR
+Gabun;GA
+Vereinigtes Königreich;GB
+Grenada;GD
+Georgien;GE
+Ghana;GH
+Gibraltar;GI
+Grönland;GL
+Gambia;GM
+Guinea;GN
+Äquatorialguinea;GQ
+Griechenland;GR
+Südgeorgien und die Südlichen Sandwichinseln;GS
+Guatemala;GT
+Guam;GU
+Guinea-Bissau;GW
+Guyana;GY
+Hongkong;HK
+Heard und die McDonaldinseln;HM
+Honduras;HN
+Kroatien;HR
+Haiti;HT
+Ungarn;HU
+Indonesien;ID
+Irland;IE
+Israel;IL
+Indien;IN
+Britisches Territorium im Indischen Ozean;IO
+Irak;IQ
+Islamische Republik Iran;IR
+Island;IS
+Italien;IT
+Jamaika;JM
+Jordanien;JO
+Japan;JP
+Kenia;KE
+Kirgisistan;KG
+Kambodscha;KH
+Kiribati;KI
+Komoren;KM
+St. Kitts und Nevis;KN
+Demokratische Volksrepublik Korea;KP
+Republik Korea;KR
+Kuwait;KW
+Kaimaninseln;KY
+Kasachstan;KZ
+Demokratische Volksrepublik Laos;LA
+Libanon;LB
+St. Lucia;LC
+Liechtenstein;LI
+Sri Lanka;LK
+Liberia;LR
+Lesotho;LS
+Litauen;LT
+Luxemburg;LU
+Lettland;LV
+Libysch-Arabische Dschamahirija;LY
+Marokko;MA
+Repubik Moldau;MD
+Montenegro;ME
+Madagaskar;MG
+Marshallinseln;MH
+Ehemalige Jugoslawische Republik Mazedonien;MK
+Mali;ML
+Myanmar;MM
+Mongolei;MN
+Macau;MO
+Nördliche Marianen;MP
+Mauretanien;MR
+Montserrat;MS
+Malta;MT
+Mauritius;MU
+Malediven;MV
+Malawi;MW
+Mexiko;MX
+Malaysia;MY
+Mosambik;MZ
+Namibia;NA
+Neukaledonien;NC
+Niger;NE
+Norfolkinseln;NF
+Nigeria;NG
+Nicaragua;NI
+Niederlande;NL
+Norwegen;NO
+Nepal;NP
+Nauru;NR
+Niueinsel;NU
+Neuseeland;NZ
+Oman;OM
+Panama;PA
+Peru;PE
+Französisch-Polynesien;PF
+Papua-Neuguinea;PG
+Philippinen;PH
+Pakistan;PK
+Polen;PL
+St. Pierre und Miquelon;PM
+Pitcairn;PN
+Besetzte palästinensische Gebiete;PS
+Portugal;PT
+Palau;PW
+Paraguay;PY
+Katar;QA
+Nicht ermittelte Länder und Gebiete;QU
+Rumänien;RO
+Russische Förderation;RU
+Ruanda;RW
+Saudi-Arabien;SA
+Salomonen;SB
+Seychellen;SC
+Sudan;SD
+Schweden;SE
+Singapur;SG
+St. Helena;SH
+Slowenien;SI
+Slowakei;SK
+Sierra Leone;SL
+San Marino;SM
+Senegal;SN
+Somalia;SO
+Suriname;SR
+Sao Tomé und Principe;ST
+El Salvador;SV
+Arabische Republik Syrien;SY
+Swasiland;SZ
+Turks- und Caicosinseln;TC
+Tschad;TD
+Französische Südgebiete;TF
+Togo;TG
+Thailand;TH
+Tadschikistan;TJ
+Tokelauinseln;TK
+Timor-Leste;TL
+Turkmenistan;TM
+Tunesien;TN
+Tonga;TO
+Türkei;TR
+Trinidad und Tobago;TT
+Tuvalu;TV
+Taiwan;TW
+Vereinigte Republik Tansania;TZ
+Ukraine;UA
+Uganda;UG
+Kleinere amerikanische Überseeinseln;UM
+Vereinigte Staaten;US
+Uruguay;UY
+Usbekistan;UZ
+Vatikanstadt;VA
+St. Vincent und die Grenadinen;VC
+Venezuela;VE
+Britische Jungferninseln;VG
+Amerikanische Jungferninsel;VI
+Vietnam;VN
+Vanuatu;VU
+Wallis und Futuna;WF
+Samoa;WS
+Ceuta;XC
+Kosovo;XK
+Melilla;XL
+Serbien;XS
+Jemen;YE
+Mayotte;YT
+Südafrika;ZA
+Sambia;ZM
+Simbabwe;ZW
