@@ -128,9 +128,11 @@ PROBAND_DB;proband.personParticulars.lastNameIndex;STRING;;;;;;;;proband.personP
 PROBAND_DB;proband.personParticulars.dateOfBirthHash;DATE_HASH;;;;;;;;proband.personParticulars.dateOfBirthHash;EQ, NE
 PROBAND_DB;proband.personParticulars.yearOfBirth;LONG;;;;;;;;proband.personParticulars.yearOfBirth;EQ, NE, GT, GE, LT, LE
 PROBAND_DB;proband.personParticulars.gender;STRING;Sex;getSexes;getName;getSex.name;;;;proband.personParticulars.gender;EQ, NE
+PROBAND_DB;proband.personParticulars.alias;STRING;;;;;;;;proband.personParticulars.alias;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 PROBAND_DB;proband.animalParticulars.animalName;STRING;;;;;;;;proband.animalParticulars.animalName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 PROBAND_DB;proband.animalParticulars.dateOfBirth;DATE;;;;;;;;proband.animalParticulars.dateOfBirth;EQ, NE, GT, GE, LT, LE
 PROBAND_DB;proband.animalParticulars.gender;STRING;Sex;getSexes;getName;getSex.name;;;;proband.animalParticulars.gender;EQ, NE
+PROBAND_DB;proband.animalParticulars.alias;STRING;;;;;;;;proband.animalParticulars.alias;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 #PROBAND_DB;proband.available;BOOLEAN;;;;;;;;proband.available;EQ, NE
 PROBAND_DB;proband.person;BOOLEAN;;;;;;;;proband.person;EQ, NE
 PROBAND_DB;proband.blinded;BOOLEAN;;;;;;;;proband.blinded;EQ, NE
