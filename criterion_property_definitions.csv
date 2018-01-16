@@ -108,6 +108,9 @@ TRIAL_DB;trial.dutyRosterTurns;LONG;;;;;;;;trial.dutyRosterTurns;IS_EMPTY, IS_NO
 TRIAL_DB;trial.courses;LONG;;;;;;;;trial.courses;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
 INPUT_FIELD_DB;inputField.id;LONG;;;;;;;;inputField.id;EQ, NE, TRUE
 INPUT_FIELD_DB;inputField.nameL10nKey;STRING;;;;;;;;inputField.nameL10nKey;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INPUT_FIELD_DB;inputField.titleL10nKey;STRING;;;;;;;;inputField.titleL10nKey;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INPUT_FIELD_DB;inputField.externalId;STRING;;;;;;;;inputField.externalId;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INPUT_FIELD_DB;inputField.localized;BOOLEAN;;;;;;;;inputField.localized;EQ, NE
 #INPUT_FIELD_DB;inputField.timePreset;LONG;;;;;;;;inputField.timePreset_LONG;HOUR_GT,HOUR_LT,MINUTE_GT,MINUTE_LT
 #INPUT_FIELD_DB;inputField.timePreset;TIME;;;;;;;;inputField.timePreset_TIME;EQ, GT, LT, NE
 INPUT_FIELD_DB;inputField.inquiries.trial.id;LONG;;;;;;;TRIAL_DB;inputField.inquiries.trial.id;EQ, NE
