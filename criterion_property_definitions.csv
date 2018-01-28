@@ -255,6 +255,10 @@ PROBAND_DB;proband.trialParticipations.lastStatus.realTimestamp;TIMESTAMP;;;;;;;
 PROBAND_DB;proband.trialParticipations.lastStatus.realTimestamp;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.trialParticipations.lastStatus.realTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
 PROBAND_DB;proband.files;LONG;;;;;;;;proband.files;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
 PROBAND_DB;proband.files.fileNameHash;STRING_HASH;;;;;;;;proband.files.fileNameHash;EQ, NE
+PROBAND_DB;proband.journalEntries;LONG;;;;;;;;proband.journalEntries;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+PROBAND_DB;proband.journalEntries.systemMessageCode;STRING;;;;;completeSystemMessageCode;;;proband.journalEntries.systemMessageCode;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.journalEntries.modifiedTimestamp;TIMESTAMP;;;;;;;;proband.journalEntries.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.journalEntries.modifiedTimestamp;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.journalEntries.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
 USER_DB;user.id;LONG;;;;;;;;user.id;EQ, NE, TRUE
 USER_DB;user.department.id;LONG;Department;getAllDepartments;getName;getId;;;;user.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
 USER_DB;user.name;STRING;;;;;;;;user.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
