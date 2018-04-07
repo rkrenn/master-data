@@ -250,7 +250,7 @@ PROBAND_DB;proband.contactDetailValues.type.id;LONG;ContactDetailType;getAllCont
 PROBAND_DB;proband.contactDetailValues;LONG;;;;;;;;proband.contactDetailValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
 PROBAND_DB;proband.contactDetailValues.na;BOOLEAN;;;;;;;;proband.contactDetailValues.na;EQ, NE
 PROBAND_DB;proband.trialParticipations.trial.id;LONG;;;;;;;TRIAL_DB;proband.trialParticipations.trial.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.lastStatus.status.id;LONG;VariablePeriod;getAllProbandListStatusTypes;getName;getId;;;;proband.trialParticipations.lastStatus.status.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.lastStatus.status.id;LONG;;getAllProbandListStatusTypes;getName;getId;;;;proband.trialParticipations.lastStatus.status.id;EQ, NE
 PROBAND_DB;proband.trialParticipations.lastStatus.realTimestamp;TIMESTAMP;;;;;;;;proband.trialParticipations.lastStatus.realTimestamp;EQ, NE, GT, GE, LT, LE
 PROBAND_DB;proband.trialParticipations.lastStatus.realTimestamp;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.trialParticipations.lastStatus.realTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
 PROBAND_DB;proband.files;LONG;;;;;;;;proband.files;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
@@ -270,3 +270,21 @@ USER_DB;user.permissionProfiles.modifiedTimestamp;TIMESTAMP;;;;;;;;user.permissi
 USER_DB;user.permissionProfiles.modifiedTimestamp;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;user.permissionProfiles.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
 USER_DB;user.identity.id;LONG;;;;;;;STAFF_DB;user.identity.id;EQ, NE
 USER_DB;user.authMethod;STRING;AuthenticationType;getAuthenticationTypes;getName;getMethod.name;;;;user.authMethod;EQ, NE
+MASS_MAIL_DB;massMail.id;LONG;;;;;;;;massMail.id;EQ, NE, TRUE
+MASS_MAIL_DB;massMail.department.id;LONG;Department;getAllDepartments;getName;getId;;;;massMail.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+MASS_MAIL_DB;massMail.name;STRING;;;;;;;;massMail.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+MASS_MAIL_DB;massMail.start;TIMESTAMP;;;;;;;;massMail.start;EQ, NE, GT, GE, LT, LE
+MASS_MAIL_DB;massMail.start;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;massMail.start.startByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+MASS_MAIL_DB;massMail.status.id;LONG;TrialStatusType;getAllMassMailStatusTypes;getName;getId;;;;massMail.status.id;EQ, NE
+MASS_MAIL_DB;massMail.type.id;LONG;TrialType;getAllMassMailTypes;getName;getId;;;;massMail.type.id;EQ, NE
+MASS_MAIL_DB;massMail.trial.id;LONG;;;;;;;TRIAL_DB;massMail.trial.id;EQ, NE
+MASS_MAIL_DB;massMail.probandListStatus.id;LONG;;getAllProbandListStatusTypes;getName;getId;;;;massMail.probandListStatus.id;EQ, NE
+MASS_MAIL_DB;massMail.fromAddress;STRING;;;;;;;;massMail.fromAddress;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+MASS_MAIL_DB;massMail.fromName;STRING;;;;;;;;massMail.fromName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+MASS_MAIL_DB;massMail.locale;STRING;;getLocales;getName;getLanguage;;;;massMail.locale;EQ, NE
+MASS_MAIL_DB;massMail.textTemplate;STRING;;;;;;;;massMail.textTemplate;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+MASS_MAIL_DB;massMail.probandTo;BOOLEAN;;;;;;;;massMail.probandTo;EQ, NE
+MASS_MAIL_DB;massMail.physicianTo;BOOLEAN;;;;;;;;massMail.physicianTo;EQ, NE
+MASS_MAIL_DB;massMail.useBeacon;BOOLEAN;;;;;;;;massMail.useBeacon;EQ, NE
+MASS_MAIL_DB;massMail.recipients;LONG;;;;;;;;massMail.recipients;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+MASS_MAIL_DB;massMail.recipients.proband.id;LONG;;;;;;;PROBAND_DB;massMail.recipients.proband.id;EQ, NE
