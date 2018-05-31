@@ -176,6 +176,7 @@ PROBAND_DB;proband.procedures;LONG;;;;;;;;proband.procedures;IS_EMPTY, IS_NOT_EM
 PROBAND_DB;proband.addresses.type.id;LONG;AddressType;getAllAddressTypes;getName;getId;;;;proband.addresses.type.id;EQ, NE
 PROBAND_DB;proband.addresses.cityNameHash;STRING_HASH;;;;;completeCityName;;;proband.addresses.cityNameHash;EQ, NE
 PROBAND_DB;proband.addresses.zipCodeHash;STRING_HASH;;;;;completeZipCode;;;proband.addresses.zipCodeHash;EQ, NE
+PROBAND_DB;proband.addresses;LONG;;;;;;;;proband.addresses;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
 #PROBAND_DB;proband.inquiryValues.inquiry.id;LONG;Inquiry;getAllInquiries;getUniqueName;getId;;;;proband.inquiryValues.inquiry.id;EQ, NE
 PROBAND_DB;proband.inquiryValues.inquiry.id;LONG;Inquiry;;getUniqueName;;completeInquiry;ctsms.Inquiry;;proband.inquiryValues.inquiry.id;EQ, NE
 #PROBAND_DB;proband.inquiryValues.inquiry.field.id;LONG;InputField;getAllInquiryInputFields;getName;getId;;;;proband.inquiryValues.inquiry.field.id;EQ, NE
@@ -249,6 +250,7 @@ PROBAND_DB;proband.contactDetailValues.valueHash;STRING_HASH;;;;;;;;proband.cont
 PROBAND_DB;proband.contactDetailValues.type.id;LONG;ContactDetailType;getAllContactDetailTypes;getName;getId;;;;proband.contactDetailValues.type.id;EQ, NE
 PROBAND_DB;proband.contactDetailValues;LONG;;;;;;;;proband.contactDetailValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
 PROBAND_DB;proband.contactDetailValues.na;BOOLEAN;;;;;;;;proband.contactDetailValues.na;EQ, NE
+PROBAND_DB;proband.massMailReceipts.massMail.id;LONG;;;;;;;MASS_MAIL_DB;proband.massMailReceipts.massMail.id;EQ, NE
 PROBAND_DB;proband.trialParticipations.trial.id;LONG;;;;;;;TRIAL_DB;proband.trialParticipations.trial.id;EQ, NE
 PROBAND_DB;proband.trialParticipations.lastStatus.status.id;LONG;;getAllProbandListStatusTypes;getName;getId;;;;proband.trialParticipations.lastStatus.status.id;EQ, NE
 PROBAND_DB;proband.trialParticipations.lastStatus.realTimestamp;TIMESTAMP;;;;;;;;proband.trialParticipations.lastStatus.realTimestamp;EQ, NE, GT, GE, LT, LE
