@@ -272,6 +272,7 @@ USER_DB;user.permissionProfiles.active;BOOLEAN;;;;;;;;user.permissionProfiles.ac
 USER_DB;user.permissionProfiles.modifiedTimestamp;TIMESTAMP;;;;;;;;user.permissionProfiles.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
 USER_DB;user.permissionProfiles.modifiedTimestamp;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;user.permissionProfiles.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
 USER_DB;user.identity.id;LONG;;;;;;;STAFF_DB;user.identity.id;EQ, NE
+USER_DB;user.identity.category.id;LONG;StaffCategory;getAllStaffCategories;getName;getId;;;;user.identity.category.id;EQ, NE
 USER_DB;user.authMethod;STRING;AuthenticationType;getAuthenticationTypes;getName;getMethod.name;;;;user.authMethod;EQ, NE
 MASS_MAIL_DB;massMail.id;LONG;;;;;;;;massMail.id;EQ, NE, TRUE
 MASS_MAIL_DB;massMail.department.id;LONG;Department;getAllDepartments;getName;getId;;;;massMail.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
