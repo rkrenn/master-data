@@ -664,6 +664,10 @@ org.phoenixctms.ctsms.service.user.UserService.updateTheme;;;;;;;;USER_USER_DEPA
 org.phoenixctms.ctsms.service.user.UserService.updateTimeZone;;;;;;;;USER_ALL_DEPARTMENTS:USER_ACTIVE_USER:USER_USER_DEPARTMENT:USER_IDENTITY_DEPARTMENT
 org.phoenixctms.ctsms.service.user.UserService.updateUser;all_trusted_hosts;modifiedUser.getId;;ANY_USER,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,ACTIVE_USER;;;;USER_ALL_DEPARTMENTS,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT
 org.phoenixctms.ctsms.service.user.UserService.updateUser;all_trusted_hosts;modifiedUser.getDepartmentId;;ANY_DEPARTMENT,USER_DEPARTMENT,IDENTITY_DEPARTMENT;;;;USER_ALL_DEPARTMENTS,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT
+org.phoenixctms.ctsms.service.user.UserService.getDataTableColumns;;userId;;ANY_USER,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,ACTIVE_USER;;;;USER_ALL_DEPARTMENTS,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,USER_ACTIVE_USER
+org.phoenixctms.ctsms.service.user.UserService.setDataTableColumns;;userId;;ANY_USER,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,ACTIVE_USER;;;;USER_ALL_DEPARTMENTS,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,USER_ACTIVE_USER
+org.phoenixctms.ctsms.service.user.UserService.clearDataTableColumns;;userId;;ANY_USER,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,ACTIVE_USER;;;;USER_ALL_DEPARTMENTS,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,USER_ACTIVE_USER
+org.phoenixctms.ctsms.service.user.UserService.getDataTableColumnCount;;userId;;ANY_USER,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,ACTIVE_USER;;;;USER_ALL_DEPARTMENTS,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,USER_ACTIVE_USER
 ;;;;;;;;
 org.phoenixctms.ctsms.service.shared.InputFieldService.addInputField;;;;;;;;INPUT_FIELD_MASTER
 org.phoenixctms.ctsms.service.shared.InputFieldService.addSelectionSetValue;;;;;;;;INPUT_FIELD_MASTER
