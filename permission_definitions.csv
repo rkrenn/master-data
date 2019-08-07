@@ -682,6 +682,7 @@ org.phoenixctms.ctsms.service.shared.InputFieldService.deleteInputField;;;;;;;;I
 org.phoenixctms.ctsms.service.shared.InputFieldService.deleteSelectionSetValue;;;;;;;;INPUT_FIELD_MASTER
 org.phoenixctms.ctsms.service.shared.InputFieldService.getEcrfFieldList;;;;;;;;INPUT_FIELD_MASTER:INPUT_FIELD_VIEW
 org.phoenixctms.ctsms.service.shared.InputFieldService.getEcrfFieldMaxSelectionSetValueCount;;;;;;;;INPUT_FIELD_VIEW:INPUT_FIELD_MASTER
+org.phoenixctms.ctsms.service.shared.InputFieldService.getInquiryMaxSelectionSetValueCount;;;;;;;;INPUT_FIELD_VIEW:INPUT_FIELD_MASTER
 org.phoenixctms.ctsms.service.shared.InputFieldService.getEcrfFieldValueCount;;;;;;;;INPUT_FIELD_MASTER:INPUT_FIELD_VIEW
 org.phoenixctms.ctsms.service.shared.InputFieldService.getInputField;;;;;;;;INPUT_FIELD_MASTER:INPUT_FIELD_VIEW
 org.phoenixctms.ctsms.service.shared.InputFieldService.getInputFieldList;;;;;;;;INPUT_FIELD_VIEW:INPUT_FIELD_MASTER
