@@ -119,7 +119,7 @@ INPUT_FIELD_DB;inputField.listEntryTags.trial.id;LONG;;;;;;;TRIAL_DB;inputField.
 INPUT_FIELD_DB;inputField.ecrfFields.trial.id;LONG;;;;;;;TRIAL_DB;inputField.ecrfFields.trial.id;EQ, NE
 INPUT_FIELD_DB;inputField.selectionSetValues;LONG;;;;;;;;inputField.selectionSetValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
 INPUT_FIELD_DB;inputField.selectionSetValues.nameL10nKey;STRING;;;;;;;;inputField.selectionSetValues.nameL10nKey;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-INPUT_FIELD_DB;inputField.selectionSetValues.value;STRING;;;;;completeInputFieldSelectionSetValue;;;inputField.selectionSetValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INPUT_FIELD_DB;inputField.selectionSetValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;inputField.selectionSetValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 INPUT_FIELD_DB;inputField.fieldType;STRING;InputFieldType;getInputFieldTypes;getName;getType.name;;;;inputField.fieldType;EQ, NE
 INPUT_FIELD_DB;inputField.category;STRING;;;;;;;;inputField.category;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 INPUT_FIELD_DB;inputField.deferredDelete;BOOLEAN;;;;;;;;inputField.deferredDelete;EQ, NE
@@ -198,7 +198,7 @@ PROBAND_DB;proband.inquiryValues.value.timeValue;TIME;;;;;;;;proband.inquiryValu
 PROBAND_DB;proband.inquiryValues.value.timeValue;LONG;;;;;;;;proband.inquiryValues.value.timeValueByHourMinute;HOUR_EQ, HOUR_GE, HOUR_GT, HOUR_LE, HOUR_LT, HOUR_NE, MINUTE_EQ, MINUTE_GE, MINUTE_GT, MINUTE_LE, MINUTE_LT, MINUTE_NE
 #PROBAND_DB;proband.inquiryValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;getAllInquiryInputFieldSelectionSetValues;getUniqueName;getId;;;;proband.inquiryValues.value.selectionValues.id;EQ, NE
 PROBAND_DB;proband.inquiryValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;;getUniqueName;;completeInquiryInputFieldSelectionSetValue;ctsms.InputFieldSelectionSetValue;;proband.inquiryValues.value.selectionValues.id;EQ, NE
-PROBAND_DB;proband.inquiryValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValue;;;proband.inquiryValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.inquiryValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;proband.inquiryValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 PROBAND_DB;proband.inquiryValues.value.selectionValues;LONG;;;;;;;;proband.inquiryValues.value.selectionValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
 #PROBAND_DB;proband.trialParticipations.tagValues.tag.id;LONG;ProbandListEntryTag;getAllProbandListEntryTags;getUniqueName;getId;;;;proband.trialParticipations.tagValues.tag.id;EQ, NE
 PROBAND_DB;proband.trialParticipations.tagValues.tag.id;LONG;ProbandListEntryTag;;getUniqueName;;completeProbandListEntryTag;ctsms.ProbandListEntryTag;;proband.trialParticipations.tagValues.tag.id;EQ, NE
@@ -220,7 +220,7 @@ PROBAND_DB;proband.trialParticipations.tagValues.value.timeValue;TIME;;;;;;;;pro
 PROBAND_DB;proband.trialParticipations.tagValues.value.timeValue;LONG;;;;;;;;proband.trialParticipations.tagValues.value.timeValueByHourMinute;HOUR_EQ, HOUR_GE, HOUR_GT, HOUR_LE, HOUR_LT, HOUR_NE, MINUTE_EQ, MINUTE_GE, MINUTE_GT, MINUTE_LE, MINUTE_LT, MINUTE_NE
 #PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;getAllProbandListEntryTagInputFieldSelectionSetValues;getUniqueName;getId;;;;proband.trialParticipations.tagValues.value.selectionValues.id;EQ, NE
 PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;;getUniqueName;;completeProbandListEntryTagInputFieldSelectionSetValue;ctsms.InputFieldSelectionSetValue;;proband.trialParticipations.tagValues.value.selectionValues.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValue;;;proband.trialParticipations.tagValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;proband.trialParticipations.tagValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues;LONG;;;;;;;;proband.trialParticipations.tagValues.value.selectionValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
 PROBAND_DB;proband.tagValues.valueHash;STRING_HASH;;;;;;;;proband.tagValues.valueHash;EQ, NE
 PROBAND_DB;proband.tagValues.tag.id;LONG;ProbandTag;getAllProbandTags;getName;getId;;;;proband.tagValues.tag.id;EQ, NE
@@ -245,7 +245,7 @@ PROBAND_DB;proband.trialParticipations.ecrfValues.value.timeValue;TIME;;;;;;;;pr
 PROBAND_DB;proband.trialParticipations.ecrfValues.value.timeValue;LONG;;;;;;;;proband.trialParticipations.ecrfValues.value.timeValueByHourMinute;HOUR_EQ, HOUR_GE, HOUR_GT, HOUR_LE, HOUR_LT, HOUR_NE, MINUTE_EQ, MINUTE_GE, MINUTE_GT, MINUTE_LE, MINUTE_LT, MINUTE_NE
 #PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;getAllEcrfFieldInputFieldSelectionSetValues;getUniqueName;getId;;;;proband.trialParticipations.ecrfValues.value.selectionValues.id;EQ, NE
 PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;;getUniqueName;;completeEcrfFieldInputFieldSelectionSetValue;ctsms.InputFieldSelectionSetValue;;proband.trialParticipations.ecrfValues.value.selectionValues.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValue;;;proband.trialParticipations.ecrfValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;proband.trialParticipations.ecrfValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues;LONG;;;;;;;;proband.trialParticipations.ecrfValues.value.selectionValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
 PROBAND_DB;proband.contactDetailValues.valueHash;STRING_HASH;;;;;;;;proband.contactDetailValues.valueHash;EQ, NE
 PROBAND_DB;proband.contactDetailValues.type.id;LONG;ContactDetailType;getAllContactDetailTypes;getName;getId;;;;proband.contactDetailValues.type.id;EQ, NE
