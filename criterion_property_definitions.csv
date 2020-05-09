@@ -267,6 +267,7 @@ USER_DB;user.department.id;LONG;Department;getAllDepartments;getName;getId;;;;us
 USER_DB;user.name;STRING;;;;;;;;user.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 USER_DB;user.locked;BOOLEAN;;;;;;;;user.locked;EQ, NE
 USER_DB;user.decrypt;BOOLEAN;;;;;;;;user.decrypt;EQ, NE
+USER_DB;user.decryptUntrusted;BOOLEAN;;;;;;;;user.decryptUntrusted;EQ, NE
 USER_DB;user.deferredDelete;BOOLEAN;;;;;;;;user.deferredDelete;EQ, NE
 USER_DB;user.permissionProfiles.profile;STRING;PermissionProfile;getPermissionProfiles;getProfileName;getProfile.name;;;;user.permissionProfiles.profile;EQ, NE
 USER_DB;user.permissionProfiles.active;BOOLEAN;;;;;;;;user.permissionProfiles.active;EQ, NE
