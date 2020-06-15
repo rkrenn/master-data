@@ -1,296 +1,296 @@
-#module;property;value_type;entity;selection_set_service_method_name;get_name_method_name;get_value_method_name;complete_method_name;jsf converter;picker;name_l10n_key;valid_restrictions
-INVENTORY_DB;inventory.id;LONG;;;;;;;;inventory.id;EQ, NE, TRUE
-INVENTORY_DB;inventory.department.id;LONG;Department;getAllDepartments;getName;getId;;;;inventory.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
-INVENTORY_DB;inventory.category.id;LONG;InventoryCategory;getAllInventoryCategories;getName;getId;;;;inventory.category.id;EQ, NE
-INVENTORY_DB;inventory.name;STRING;;;;;;;;inventory.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-INVENTORY_DB;inventory.bookable;BOOLEAN;;;;;;;;inventory.bookable;EQ, NE
-INVENTORY_DB;inventory.deferredDelete;BOOLEAN;;;;;;;;inventory.deferredDelete;EQ, NE
-INVENTORY_DB;inventory.parent.id;LONG;;;;;;;INVENTORY_DB;inventory.parent.id;EQ, NE, IS_NULL
-INVENTORY_DB;inventory.owner.id;LONG;;;;;;;STAFF_DB;inventory.owner.id;EQ, NE, IS_NULL, IS_EQ_CONTEXT_IDENTITY_ID
-INVENTORY_DB;inventory.tagValues.value;STRING;;;;;;;;inventory.tagValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-INVENTORY_DB;inventory.tagValues.tag.id;LONG;InventoryTag;getAllInventoryTags;getName;getId;;;;inventory.tagValues.tag.id;EQ, NE
-INVENTORY_DB;inventory.tagValues;LONG;;;;;;;;inventory.tagValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-INVENTORY_DB;inventory.bookings.onBehalfOf.id;LONG;;;;;;;STAFF_DB;inventory.bookings.onBehalfOf.id;EQ, NE, IS_EQ_CONTEXT_IDENTITY_ID
-INVENTORY_DB;inventory.bookings.proband.id;LONG;;;;;;;PROBAND_DB;inventory.bookings.proband.id;EQ, NE
-INVENTORY_DB;inventory.bookings.trial.id;LONG;;;;;;;TRIAL_DB;inventory.bookings.trial.id;EQ, NE
-INVENTORY_DB;inventory.bookings.course.id;LONG;;;;;;;COURSE_DB;inventory.bookings.course.id;EQ, NE
-INVENTORY_DB;inventory.statusEntries.start;TIMESTAMP;;;;;;;;inventory.statusEntries.start;EQ, NE, GT, GE, LT, LE
-INVENTORY_DB;inventory.statusEntries.start;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;inventory.statusEntries.startByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-INVENTORY_DB;inventory.statusEntries.stop;TIMESTAMP;;;;;;;;inventory.statusEntries.stop;IS_NULL, EQ, NE, GT, GE, LT, LE
-INVENTORY_DB;inventory.statusEntries.stop;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;inventory.statusEntries.stopByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-INVENTORY_DB;inventory.statusEntries.type.id;LONG;InventoryStatusType;getAllInventoryStatusTypes;getName;getId;;;;inventory.statusEntries.type.id;EQ, NE
-INVENTORY_DB;inventory.statusEntries.type.inventoryActive;BOOLEAN;;;;;;;;inventory.statusEntries.type.inventoryActive;EQ, NE
-STAFF_DB;staff.id;LONG;;;;;;;;staff.id;EQ, NE, TRUE
-STAFF_DB;staff.department.id;LONG;Department;getAllDepartments;getName;getId;;;;staff.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
-STAFF_DB;staff.category.id;LONG;StaffCategory;getAllStaffCategories;getName;getId;;;;staff.category.id;EQ, NE
-STAFF_DB;staff.personParticulars.firstName;STRING;;;;;;;;staff.personParticulars.firstName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-STAFF_DB;staff.personParticulars.lastName;STRING;;;;;;;;staff.personParticulars.lastName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-STAFF_DB;staff.organisationParticulars.organisationName;STRING;;;;;;;;staff.organisationParticulars.organisationName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-STAFF_DB;staff.personParticulars.dateOfBirth;DATE;;;;;;;;staff.personParticulars.dateOfBirth;EQ, NE, GT, GE, LT, LE
-STAFF_DB;staff.person;BOOLEAN;;;;;;;;staff.person;EQ, NE
-STAFF_DB;staff.employee;BOOLEAN;;;;;;;;staff.employee;EQ, NE
-STAFF_DB;staff.allocatable;BOOLEAN;;;;;;;;staff.allocatable;EQ, NE
-STAFF_DB;staff.deferredDelete;BOOLEAN;;;;;;;;staff.deferredDelete;EQ, NE
-STAFF_DB;staff.parent.id;LONG;;;;;;;STAFF_DB;staff.parent.id;EQ, NE, IS_EQ_CONTEXT_IDENTITY_ID
-STAFF_DB;staff.trialMemberships.trial.id;LONG;;;;;;;TRIAL_DB;staff.trialMemberships.trial.id;EQ, NE
-STAFF_DB;staff.participations.course.id;LONG;;;;;;;COURSE_DB;staff.participations.course.id;EQ, NE
-STAFF_DB;staff.participations.course.category.id;LONG;CourseCategory;getAllCourseCategories;getName;getId;;;;staff.participations.course.category.id;EQ, NE
-STAFF_DB;staff.participations.course.trial.id;LONG;;;;;;;TRIAL_DB;staff.participations.course.trial.id;EQ, NE
-STAFF_DB;staff.participations.course.stop;DATE;;;;;;;;staff.participations.course.stop;EQ, NE, GT, GE, LT, LE
-STAFF_DB;staff.participations.course.stop;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;staff.participations.course.stopByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-STAFF_DB;staff.participations;LONG;;;;;;;;staff.participations;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-STAFF_DB;staff.cvPositions;LONG;;;;;;;;staff.cvPositions;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-STAFF_DB;staff.cvPositions.section.id;LONG;CvSection;getAllCvSections;getName;getId;;;;staff.cvPositions.section.id;EQ, NE
-STAFF_DB;staff.tagValues.value;STRING;;;;;;;;staff.tagValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-STAFF_DB;staff.tagValues.tag.id;LONG;StaffTag;getAllStaffTags;getName;getId;;;;staff.tagValues.tag.id;EQ, NE
-STAFF_DB;staff.tagValues;LONG;;;;;;;;staff.tagValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-STAFF_DB;staff.contactDetailValues.value;STRING;;;;;;;;staff.contactDetailValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-STAFF_DB;staff.contactDetailValues.type.id;LONG;ContactDetailType;getAllContactDetailTypes;getName;getId;;;;staff.contactDetailValues.type.id;EQ, NE
-STAFF_DB;staff.contactDetailValues;LONG;;;;;;;;staff.contactDetailValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-STAFF_DB;staff.contactDetailValues.na;BOOLEAN;;;;;;;;staff.contactDetailValues.na;EQ, NE
-STAFF_DB;staff.files;LONG;;;;;;;;staff.files;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-STAFF_DB;staff.statusEntries.start;TIMESTAMP;;;;;;;;staff.statusEntries.start;EQ, NE, GT, GE, LT, LE
-STAFF_DB;staff.statusEntries.start;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;staff.statusEntries.startByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-STAFF_DB;staff.statusEntries.stop;TIMESTAMP;;;;;;;;staff.statusEntries.stop;IS_NULL, EQ, NE, GT, GE, LT, LE
-STAFF_DB;staff.statusEntries.stop;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;staff.statusEntries.stopByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-STAFF_DB;staff.statusEntries.type.id;LONG;StaffStatusType;getAllStaffStatusTypes;getName;getId;;;;staff.statusEntries.type.id;EQ, NE
-STAFF_DB;staff.statusEntries.type.staffActive;BOOLEAN;;;;;;;;staff.statusEntries.type.staffActive;EQ, NE
-STAFF_DB;staff.dutyRosterTurns.trial.id;LONG;;;;;;;TRIAL_DB;staff.dutyRosterTurns.trial.id;EQ, NE
-STAFF_DB;staff.dutyRosterTurns.start;TIMESTAMP;;;;;;;;staff.dutyRosterTurns.start;EQ, NE, GT, GE, LT, LE
-STAFF_DB;staff.dutyRosterTurns.start;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;staff.dutyRosterTurns.startByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-STAFF_DB;staff.dutyRosterTurns.stop;TIMESTAMP;;;;;;;;staff.dutyRosterTurns.stop;EQ, NE, GT, GE, LT, LE
-STAFF_DB;staff.dutyRosterTurns.stop;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;staff.dutyRosterTurns.stopByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-COURSE_DB;course.id;LONG;;;;;;;;course.id;EQ, NE, TRUE
-COURSE_DB;course.department.id;LONG;Department;getAllDepartments;getName;getId;;;;course.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
-COURSE_DB;course.category.id;LONG;CourseCategory;getAllCourseCategories;getName;getId;;;;course.category.id;EQ, NE
-COURSE_DB;course.trial.id;LONG;;;;;;;TRIAL_DB;course.trial.id;EQ, NE
-COURSE_DB;course.name;STRING;;;;;;;;course.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-COURSE_DB;course.stop;DATE;;;;;;;;course.stop;EQ, NE, GT, GE, LT, LE
-COURSE_DB;course.stop;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;course.stopByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-COURSE_DB;course.participationDeadline;TIMESTAMP;;;;;;;;course.participationDeadline;EQ, NE, GT, GE, LT, LE
-COURSE_DB;course.participationDeadline;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;course.participationByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-COURSE_DB;course.showCvPreset;BOOLEAN;;;;;;;;course.showCvPreset;EQ, NE
-COURSE_DB;course.expires;BOOLEAN;;;;;;;;course.expires;EQ, NE
-COURSE_DB;course.validityPeriod;STRING;VariablePeriod;getVariablePeriods;getName;getPeriod.name;;;;course.validityPeriod;EQ, NE
-COURSE_DB;course.selfRegistration;BOOLEAN;;;;;;;;course.selfRegistration;EQ, NE
-COURSE_DB;course.renewals.id;LONG;;;;;;;COURSE_DB;course.renewals.id;EQ, NE
-COURSE_DB;course.deferredDelete;BOOLEAN;;;;;;;;course.deferredDelete;EQ, NE
-COURSE_DB;course.renewals;LONG;;;;;;;;course.renewals;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-COURSE_DB;course.precedingCourses.id;LONG;;;;;;;COURSE_DB;course.precedingCourses.id;EQ, NE
-COURSE_DB;course.precedingCourses;LONG;;;;;;;;course.precedingCourses;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-COURSE_DB;course.lecturers.staff.id;LONG;;;;;;;STAFF_DB;course.lecturers.staff.id;EQ, NE, IS_EQ_CONTEXT_IDENTITY_ID
-COURSE_DB;course.lecturers;LONG;;;;;;;;course.lecturers;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-TRIAL_DB;trial.id;LONG;;;;;;;;trial.id;EQ, NE, TRUE
-TRIAL_DB;trial.department.id;LONG;Department;getAllDepartments;getName;getId;;;;trial.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
-TRIAL_DB;trial.name;STRING;;;;;;;;trial.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-TRIAL_DB;trial.status.id;LONG;TrialStatusType;getAllTrialStatusTypes;getName;getId;;;;trial.status.id;EQ, NE
-TRIAL_DB;trial.type.id;LONG;TrialType;getAllTrialTypes;getName;getId;;;;trial.type.id;EQ, NE
-TRIAL_DB;trial.sponsoring.id;LONG;SponsoringType;getAllSponsoringTypes;getName;getId;;;;trial.sponsoring.id;EQ, NE
-TRIAL_DB;trial.dutySelfAllocationLocked;BOOLEAN;;;;;;;;trial.dutySelfAllocationLocked;EQ, NE
-TRIAL_DB;trial.dutySelfAllocationLockedUntil;TIMESTAMP;;;;;;;;trial.dutySelfAllocationLockedUntil;IS_NULL, EQ, NE, GT, GE, LT, LE
-TRIAL_DB;trial.dutySelfAllocationLockedUntil;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;trial.dutySelfAllocationLockedUntilByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-TRIAL_DB;trial.dutySelfAllocationLockedFrom;TIMESTAMP;;;;;;;;trial.dutySelfAllocationLockedFrom;IS_NULL, EQ, NE, GT, GE, LT, LE
-TRIAL_DB;trial.dutySelfAllocationLockedFrom;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;trial.dutySelfAllocationLockedFromByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-TRIAL_DB;trial.randomization;STRING;RandomizationMode;getRandomizationModes;getName;getMode.name;;;;trial.randomization;EQ, NE
-TRIAL_DB;trial.exclusiveProbands;BOOLEAN;;;;;;;;trial.exclusiveProbands;EQ, NE
-TRIAL_DB;trial.signupProbandList;BOOLEAN;;;;;;;;trial.signupProbandList;EQ, NE
-TRIAL_DB;trial.signupInquiries;BOOLEAN;;;;;;;;trial.signupInquiries;EQ, NE
-TRIAL_DB;trial.deferredDelete;BOOLEAN;;;;;;;;trial.deferredDelete;EQ, NE
-TRIAL_DB;trial.surveyStatus.id;LONG;SurveyStatusType;getAllSurveyStatusTypes;getName;getId;;;;trial.surveyStatus.id;EQ, NE
-TRIAL_DB;trial.members.staff.id;LONG;;;;;;;STAFF_DB;trial.members.staff.id;EQ, NE, IS_EQ_CONTEXT_IDENTITY_ID
-TRIAL_DB;trial.members.role.id;LONG;TeamMemberRole;getAllTeamMemberRoles;getName;getId;;;;trial.members.role.id;EQ, NE
-TRIAL_DB;trial.members;LONG;;;;;;;;trial.members;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-TRIAL_DB;trial.probandListEntries.proband.id;LONG;;;;;;;PROBAND_DB;trial.probandListEntries.proband.id;EQ, NE
-TRIAL_DB;trial.probandListEntries;LONG;;;;;;;;trial.probandListEntries;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-TRIAL_DB;trial.tagValues.value;STRING;;;;;;;;trial.tagValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-TRIAL_DB;trial.tagValues.tag.id;LONG;TrialTag;getAllTrialTags;getName;getId;;;;trial.tagValues.tag.id;EQ, NE
-TRIAL_DB;trial.tagValues;LONG;;;;;;;;trial.tagValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-TRIAL_DB;trial.dutyRosterTurns;LONG;;;;;;;;trial.dutyRosterTurns;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-TRIAL_DB;trial.courses;LONG;;;;;;;;trial.courses;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-INPUT_FIELD_DB;inputField.id;LONG;;;;;;;;inputField.id;EQ, NE, TRUE
-INPUT_FIELD_DB;inputField.nameL10nKey;STRING;;;;;;;;inputField.nameL10nKey;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-INPUT_FIELD_DB;inputField.titleL10nKey;STRING;;;;;;;;inputField.titleL10nKey;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-INPUT_FIELD_DB;inputField.externalId;STRING;;;;;;;;inputField.externalId;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-INPUT_FIELD_DB;inputField.localized;BOOLEAN;;;;;;;;inputField.localized;EQ, NE
-#INPUT_FIELD_DB;inputField.timePreset;LONG;;;;;;;;inputField.timePreset_LONG;HOUR_GT,HOUR_LT,MINUTE_GT,MINUTE_LT
-#INPUT_FIELD_DB;inputField.timePreset;TIME;;;;;;;;inputField.timePreset_TIME;EQ, GT, LT, NE
-INPUT_FIELD_DB;inputField.inquiries.trial.id;LONG;;;;;;;TRIAL_DB;inputField.inquiries.trial.id;EQ, NE
-INPUT_FIELD_DB;inputField.listEntryTags.trial.id;LONG;;;;;;;TRIAL_DB;inputField.listEntryTags.trial.id;EQ, NE
-INPUT_FIELD_DB;inputField.ecrfFields.trial.id;LONG;;;;;;;TRIAL_DB;inputField.ecrfFields.trial.id;EQ, NE
-INPUT_FIELD_DB;inputField.selectionSetValues;LONG;;;;;;;;inputField.selectionSetValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-INPUT_FIELD_DB;inputField.selectionSetValues.nameL10nKey;STRING;;;;;;;;inputField.selectionSetValues.nameL10nKey;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-INPUT_FIELD_DB;inputField.selectionSetValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;inputField.selectionSetValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-INPUT_FIELD_DB;inputField.fieldType;STRING;InputFieldType;getInputFieldTypes;getName;getType.name;;;;inputField.fieldType;EQ, NE
-INPUT_FIELD_DB;inputField.category;STRING;;;;;;;;inputField.category;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-INPUT_FIELD_DB;inputField.deferredDelete;BOOLEAN;;;;;;;;inputField.deferredDelete;EQ, NE
-PROBAND_DB;proband.id;LONG;;;;;;;;proband.id;EQ, NE, TRUE
-PROBAND_DB;proband.department.id;LONG;Department;getAllDepartments;getName;getId;;;;proband.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
-PROBAND_DB;proband.category.id;LONG;ProbandCategory;getAllProbandCategories;getName;getId;;;;proband.category.id;EQ, NE
-PROBAND_DB;proband.personParticulars.firstNameHash;STRING_HASH;;;;;;;;proband.personParticulars.firstNameHash;EQ, NE
-PROBAND_DB;proband.personParticulars.lastNameHash;STRING_HASH;;;;;;;;proband.personParticulars.lastNameHash;EQ, NE
-PROBAND_DB;proband.personParticulars.lastNameIndex;STRING;;;;;;;;proband.personParticulars.lastNameIndex;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.personParticulars.dateOfBirthHash;DATE_HASH;;;;;;;;proband.personParticulars.dateOfBirthHash;EQ, NE
-PROBAND_DB;proband.personParticulars.yearOfBirth;LONG;;;;;;;;proband.personParticulars.yearOfBirth;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.personParticulars.gender;STRING;Sex;getSexes;getName;getSex.name;;;;proband.personParticulars.gender;EQ, NE
-PROBAND_DB;proband.personParticulars.alias;STRING;;;;;;;;proband.personParticulars.alias;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.animalParticulars.animalName;STRING;;;;;;;;proband.animalParticulars.animalName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.animalParticulars.dateOfBirth;DATE;;;;;;;;proband.animalParticulars.dateOfBirth;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.animalParticulars.gender;STRING;Sex;getSexes;getName;getSex.name;;;;proband.animalParticulars.gender;EQ, NE
-PROBAND_DB;proband.animalParticulars.alias;STRING;;;;;;;;proband.animalParticulars.alias;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-#PROBAND_DB;proband.available;BOOLEAN;;;;;;;;proband.available;EQ, NE
-PROBAND_DB;proband.person;BOOLEAN;;;;;;;;proband.person;EQ, NE
-PROBAND_DB;proband.blinded;BOOLEAN;;;;;;;;proband.blinded;EQ, NE
-PROBAND_DB;proband.physician.id;LONG;;;;;;;STAFF_DB;proband.physician.id;EQ, NE, IS_NULL, IS_EQ_CONTEXT_IDENTITY_ID
-PROBAND_DB;proband.deferredDelete;BOOLEAN;;;;;;;;proband.deferredDelete;EQ, NE
-PROBAND_DB;proband.category.locked;BOOLEAN;;;;;;;;proband.category.locked;EQ, NE
-#PROBAND_DB;proband.recruitmentForOtherTrialsAllowed;BOOLEAN;;;;;;;;proband.recruitmentForOtherTrialsAllowed;EQ, NE
-PROBAND_DB;proband.privacyConsentStatus.id;LONG;PrivacyConsentStatusType;getAllPrivacyConsentStatusTypes;getName;getId;;;;proband.privacyConsentStatus.id;EQ, NE
-PROBAND_DB;proband.privacyConsentStatus.autoDelete;BOOLEAN;;;;;;;;proband.privacyConsentStatus.autoDelete;EQ, NE
-PROBAND_DB;proband.autoDeleteDeadline;DATE;;;;;;;;proband.autoDeleteDeadline;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.autoDeleteDeadline;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.autoDeleteDeadlineByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-PROBAND_DB;proband.diagnoses.code.systematics.blocks.preferredRubricLabel;STRING;;;;;completeIcdSystBlockPreferredRubricLabel;;;proband.diagnoses.code.systematics.blocks.preferredRubricLabel;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.diagnoses.code.systematics.categories.preferredRubricLabel;STRING;;;;;completeIcdSystCategoryPreferredRubricLabel;;;proband.diagnoses.code.systematics.categories.preferredRubricLabel;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.diagnoses.code.text;STRING;;;;;completeAlphaIdText;;;proband.diagnoses.code.text;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.diagnoses.code.primaryCode;STRING;;;;;completeAlphaIdCode;;;proband.diagnoses.code.primaryCode;EQ, NE, LIKE, ILIKE
-PROBAND_DB;proband.diagnoses.start;DATE;;;;;;;;proband.diagnoses.start;IS_NULL, EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.diagnoses.start;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.diagnoses.startByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-PROBAND_DB;proband.diagnoses.stop;DATE;;;;;;;;proband.diagnoses.stop;IS_NULL, EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.diagnoses.stop;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.diagnoses.stopByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-PROBAND_DB;proband.diagnoses;LONG;;;;;;;;proband.diagnoses;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-PROBAND_DB;proband.medications.asp.name;STRING;;;;;completeAspName;;;proband.medications.asp.name;EQ, NE, LIKE, ILIKE
-PROBAND_DB;proband.medications.asp.atcCodes.code;STRING;;;;;completeAspAtcCodeCode;;;proband.medications.asp.atcCodes.code;EQ, NE, LIKE, ILIKE
-PROBAND_DB;proband.medications.substances.name;STRING;;;;;completeAspSubstanceName;;;proband.medications.substances.name;EQ, NE, LIKE, ILIKE
-PROBAND_DB;proband.medications.start;DATE;;;;;;;;proband.medications.start;IS_NULL, EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.medications.start;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.medications.startByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-PROBAND_DB;proband.medications.stop;DATE;;;;;;;;proband.medications.stop;IS_NULL, EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.medications.stop;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.medications.stopByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-PROBAND_DB;proband.medications;LONG;;;;;;;;proband.medications;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-PROBAND_DB;proband.procedures.code.systematics.blocks.preferredRubricLabel;STRING;;;;;completeOpsSystBlockPreferredRubricLabel;;;proband.procedures.code.systematics.blocks.preferredRubricLabel;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.procedures.code.systematics.categories.preferredRubricLabel;STRING;;;;;completeOpsSystCategoryPreferredRubricLabel;;;proband.procedures.code.systematics.categories.preferredRubricLabel;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.procedures.code.text;STRING;;;;;completeOpsCodeText;;;proband.procedures.code.text;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.procedures.code.firstCode;STRING;;;;;completeOpsCodeCode;;;proband.procedures.code.firstCode;EQ, NE, LIKE, ILIKE
-PROBAND_DB;proband.procedures.start;DATE;;;;;;;;proband.procedures.start;IS_NULL, EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.procedures.start;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.procedures.startByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-PROBAND_DB;proband.procedures.stop;DATE;;;;;;;;proband.procedures.stop;IS_NULL, EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.procedures.stop;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.procedures.stopByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-PROBAND_DB;proband.procedures;LONG;;;;;;;;proband.procedures;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-PROBAND_DB;proband.addresses.type.id;LONG;AddressType;getAllAddressTypes;getName;getId;;;;proband.addresses.type.id;EQ, NE
-PROBAND_DB;proband.addresses.cityNameHash;STRING_HASH;;;;;completeCityName;;;proband.addresses.cityNameHash;EQ, NE
-PROBAND_DB;proband.addresses.zipCodeHash;STRING_HASH;;;;;completeZipCode;;;proband.addresses.zipCodeHash;EQ, NE
-PROBAND_DB;proband.addresses;LONG;;;;;;;;proband.addresses;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-#PROBAND_DB;proband.inquiryValues.inquiry.id;LONG;Inquiry;getAllInquiries;getUniqueName;getId;;;;proband.inquiryValues.inquiry.id;EQ, NE
-PROBAND_DB;proband.inquiryValues.inquiry.id;LONG;Inquiry;;getUniqueName;;completeInquiry;ctsms.Inquiry;;proband.inquiryValues.inquiry.id;EQ, NE
-#PROBAND_DB;proband.inquiryValues.inquiry.field.id;LONG;InputField;getAllInquiryInputFields;getName;getId;;;;proband.inquiryValues.inquiry.field.id;EQ, NE
-PROBAND_DB;proband.inquiryValues.inquiry.field.id;LONG;InputField;;getName;;completeInquiryInputField;ctsms.InputField;;proband.inquiryValues.inquiry.field.id;EQ, NE
-PROBAND_DB;proband.inquiryValues;LONG;;;;;;;;proband.inquiryValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-PROBAND_DB;proband.inquiryValues.inquiry.trial.id;LONG;;;;;;;TRIAL_DB;proband.inquiryValues.inquiry.trial.id;EQ, NE
-PROBAND_DB;proband.inquiryValues.modifiedTimestamp;TIMESTAMP;;;;;;;;proband.inquiryValues.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.inquiryValues.modifiedTimestamp;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.inquiryValues.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-PROBAND_DB;proband.inquiryValues.value.stringValue;STRING;;;;;completeInputFieldTextValue;;;proband.inquiryValues.value.stringValue;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.inquiryValues.value.booleanValue;BOOLEAN;;;;;;;;proband.inquiryValues.value.booleanValue;EQ, NE
-PROBAND_DB;proband.inquiryValues.value.longValue;LONG;;;;;;;;proband.inquiryValues.value.longValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.inquiryValues.value.floatValue;FLOAT;;;;;;;;proband.inquiryValues.value.floatValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.inquiryValues.value.dateValue;DATE;;;;;;;;proband.inquiryValues.value.dateValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.inquiryValues.value.dateValue;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.inquiryValues.value.dateValueByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-PROBAND_DB;proband.inquiryValues.value.timestampValue;TIMESTAMP;;;;;;;;proband.inquiryValues.value.timestampValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.inquiryValues.value.timestampValue;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.inquiryValues.value.timestampValueByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-PROBAND_DB;proband.inquiryValues.value.timeValue;TIME;;;;;;;;proband.inquiryValues.value.timeValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.inquiryValues.value.timeValue;LONG;;;;;;;;proband.inquiryValues.value.timeValueByHourMinute;HOUR_EQ, HOUR_GE, HOUR_GT, HOUR_LE, HOUR_LT, HOUR_NE, MINUTE_EQ, MINUTE_GE, MINUTE_GT, MINUTE_LE, MINUTE_LT, MINUTE_NE
-#PROBAND_DB;proband.inquiryValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;getAllInquiryInputFieldSelectionSetValues;getUniqueName;getId;;;;proband.inquiryValues.value.selectionValues.id;EQ, NE
-PROBAND_DB;proband.inquiryValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;;getUniqueName;;completeInquiryInputFieldSelectionSetValue;ctsms.InputFieldSelectionSetValue;;proband.inquiryValues.value.selectionValues.id;EQ, NE
-PROBAND_DB;proband.inquiryValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;proband.inquiryValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.inquiryValues.value.selectionValues;LONG;;;;;;;;proband.inquiryValues.value.selectionValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-#PROBAND_DB;proband.trialParticipations.tagValues.tag.id;LONG;ProbandListEntryTag;getAllProbandListEntryTags;getUniqueName;getId;;;;proband.trialParticipations.tagValues.tag.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.tagValues.tag.id;LONG;ProbandListEntryTag;;getUniqueName;;completeProbandListEntryTag;ctsms.ProbandListEntryTag;;proband.trialParticipations.tagValues.tag.id;EQ, NE
-#PROBAND_DB;proband.trialParticipations.tagValues.tag.field.id;LONG;InputField;getAllProbandListEntryTagInputFields;getName;getId;;;;proband.trialParticipations.tagValues.tag.field.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.tagValues.tag.field.id;LONG;InputField;;getName;;completeProbandListEntryTagInputField;ctsms.InputField;;proband.trialParticipations.tagValues.tag.field.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.tagValues;LONG;;;;;;;;proband.trialParticipations.tagValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-#PROBAND_DB;proband.trialParticipations.trial.id;LONG;;;;;;;TRIAL_DB;proband.trialParticipations.trial.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.tagValues.modifiedTimestamp;TIMESTAMP;;;;;;;;proband.trialParticipations.tagValues.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.tagValues.modifiedTimestamp;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.trialParticipations.tagValues.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-PROBAND_DB;proband.trialParticipations.tagValues.value.stringValue;STRING;;;;;completeInputFieldTextValue;;;proband.trialParticipations.tagValues.value.stringValue;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.trialParticipations.tagValues.value.booleanValue;BOOLEAN;;;;;;;;proband.trialParticipations.tagValues.value.booleanValue;EQ, NE
-PROBAND_DB;proband.trialParticipations.tagValues.value.longValue;LONG;;;;;;;;proband.trialParticipations.tagValues.value.longValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.tagValues.value.floatValue;FLOAT;;;;;;;;proband.trialParticipations.tagValues.value.floatValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.tagValues.value.dateValue;DATE;;;;;;;;proband.trialParticipations.tagValues.value.dateValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.tagValues.value.dateValue;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.trialParticipations.tagValues.value.dateValueByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-PROBAND_DB;proband.trialParticipations.tagValues.value.timestampValue;TIMESTAMP;;;;;;;;proband.trialParticipations.tagValues.value.timestampValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.tagValues.value.timestampValue;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.trialParticipations.tagValues.value.timestampValueByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-PROBAND_DB;proband.trialParticipations.tagValues.value.timeValue;TIME;;;;;;;;proband.trialParticipations.tagValues.value.timeValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.tagValues.value.timeValue;LONG;;;;;;;;proband.trialParticipations.tagValues.value.timeValueByHourMinute;HOUR_EQ, HOUR_GE, HOUR_GT, HOUR_LE, HOUR_LT, HOUR_NE, MINUTE_EQ, MINUTE_GE, MINUTE_GT, MINUTE_LE, MINUTE_LT, MINUTE_NE
-#PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;getAllProbandListEntryTagInputFieldSelectionSetValues;getUniqueName;getId;;;;proband.trialParticipations.tagValues.value.selectionValues.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;;getUniqueName;;completeProbandListEntryTagInputFieldSelectionSetValue;ctsms.InputFieldSelectionSetValue;;proband.trialParticipations.tagValues.value.selectionValues.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;proband.trialParticipations.tagValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues;LONG;;;;;;;;proband.trialParticipations.tagValues.value.selectionValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-PROBAND_DB;proband.tagValues.valueHash;STRING_HASH;;;;;;;;proband.tagValues.valueHash;EQ, NE
-PROBAND_DB;proband.tagValues.tag.id;LONG;ProbandTag;getAllProbandTags;getName;getId;;;;proband.tagValues.tag.id;EQ, NE
-PROBAND_DB;proband.tagValues;LONG;;;;;;;;proband.tagValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-#PROBAND_DB;proband.trialParticipations.ecrfValues.ecrfField.id;LONG;ECRFField;getAllEcrfFields;getUniqueName;getId;;;;proband.trialParticipations.ecrfValues.ecrfField.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.ecrfValues.ecrfField.id;LONG;ECRFField;;getUniqueName;;completeEcrfField;ctsms.EcrfField;;proband.trialParticipations.ecrfValues.ecrfField.id;EQ, NE
-#PROBAND_DB;proband.trialParticipations.ecrfValues.ecrfField.field.id;LONG;InputField;getAllEcrfFieldInputFields;getName;getId;;;;proband.trialParticipations.ecrfValues.ecrfField.field.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.ecrfValues.ecrfField.field.id;LONG;InputField;;getName;;completeEcrfFieldInputField;ctsms.InputField;;proband.trialParticipations.ecrfValues.ecrfField.field.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.ecrfValues;LONG;;;;;;;;proband.trialParticipations.ecrfValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-#PROBAND_DB;proband.trialParticipations.trial.id;LONG;;;;;;;TRIAL_DB;proband.trialParticipations.trial.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.ecrfValues.modifiedTimestamp;TIMESTAMP;;;;;;;;proband.trialParticipations.ecrfValues.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.ecrfValues.modifiedTimestamp;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.trialParticipations.ecrfValues.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.stringValue;STRING;;;;;completeInputFieldTextValue;;;proband.trialParticipations.ecrfValues.value.stringValue;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.booleanValue;BOOLEAN;;;;;;;;proband.trialParticipations.ecrfValues.value.booleanValue;EQ, NE
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.longValue;LONG;;;;;;;;proband.trialParticipations.ecrfValues.value.longValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.floatValue;FLOAT;;;;;;;;proband.trialParticipations.ecrfValues.value.floatValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.dateValue;DATE;;;;;;;;proband.trialParticipations.ecrfValues.value.dateValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.dateValue;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.trialParticipations.ecrfValues.value.dateValueByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.timestampValue;TIMESTAMP;;;;;;;;proband.trialParticipations.ecrfValues.value.timestampValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.timestampValue;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.trialParticipations.ecrfValues.value.timestampValueByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.timeValue;TIME;;;;;;;;proband.trialParticipations.ecrfValues.value.timeValue;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.timeValue;LONG;;;;;;;;proband.trialParticipations.ecrfValues.value.timeValueByHourMinute;HOUR_EQ, HOUR_GE, HOUR_GT, HOUR_LE, HOUR_LT, HOUR_NE, MINUTE_EQ, MINUTE_GE, MINUTE_GT, MINUTE_LE, MINUTE_LT, MINUTE_NE
-#PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;getAllEcrfFieldInputFieldSelectionSetValues;getUniqueName;getId;;;;proband.trialParticipations.ecrfValues.value.selectionValues.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;;getUniqueName;;completeEcrfFieldInputFieldSelectionSetValue;ctsms.InputFieldSelectionSetValue;;proband.trialParticipations.ecrfValues.value.selectionValues.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;proband.trialParticipations.ecrfValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues;LONG;;;;;;;;proband.trialParticipations.ecrfValues.value.selectionValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-PROBAND_DB;proband.contactDetailValues.valueHash;STRING_HASH;;;;;;;;proband.contactDetailValues.valueHash;EQ, NE
-PROBAND_DB;proband.contactDetailValues.type.id;LONG;ContactDetailType;getAllContactDetailTypes;getName;getId;;;;proband.contactDetailValues.type.id;EQ, NE
-PROBAND_DB;proband.contactDetailValues;LONG;;;;;;;;proband.contactDetailValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-PROBAND_DB;proband.contactDetailValues.na;BOOLEAN;;;;;;;;proband.contactDetailValues.na;EQ, NE
-PROBAND_DB;proband.massMailReceipts.massMail.id;LONG;;;;;;;MASS_MAIL_DB;proband.massMailReceipts.massMail.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.trial.id;LONG;;;;;;;TRIAL_DB;proband.trialParticipations.trial.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.lastStatus.status.id;LONG;;getAllProbandListStatusTypes;getName;getId;;;;proband.trialParticipations.lastStatus.status.id;EQ, NE
-PROBAND_DB;proband.trialParticipations.lastStatus.realTimestamp;TIMESTAMP;;;;;;;;proband.trialParticipations.lastStatus.realTimestamp;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.trialParticipations.lastStatus.realTimestamp;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.trialParticipations.lastStatus.realTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-PROBAND_DB;proband.files;LONG;;;;;;;;proband.files;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-PROBAND_DB;proband.files.fileNameHash;STRING_HASH;;;;;;;;proband.files.fileNameHash;EQ, NE
-PROBAND_DB;proband.journalEntries;LONG;;;;;;;;proband.journalEntries;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-PROBAND_DB;proband.journalEntries.systemMessageCode;STRING;;;;;completeSystemMessageCode;;;proband.journalEntries.systemMessageCode;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-PROBAND_DB;proband.journalEntries.modifiedTimestamp;TIMESTAMP;;;;;;;;proband.journalEntries.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
-PROBAND_DB;proband.journalEntries.modifiedTimestamp;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;proband.journalEntries.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-USER_DB;user.id;LONG;;;;;;;;user.id;EQ, NE, TRUE
-USER_DB;user.department.id;LONG;Department;getAllDepartments;getName;getId;;;;user.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
-USER_DB;user.name;STRING;;;;;;;;user.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-USER_DB;user.locked;BOOLEAN;;;;;;;;user.locked;EQ, NE
-USER_DB;user.decrypt;BOOLEAN;;;;;;;;user.decrypt;EQ, NE
-USER_DB;user.decryptUntrusted;BOOLEAN;;;;;;;;user.decryptUntrusted;EQ, NE
-USER_DB;user.deferredDelete;BOOLEAN;;;;;;;;user.deferredDelete;EQ, NE
-USER_DB;user.permissionProfiles.profile;STRING;PermissionProfile;getPermissionProfiles;getProfileName;getProfile.name;;;;user.permissionProfiles.profile;EQ, NE
-USER_DB;user.permissionProfiles.active;BOOLEAN;;;;;;;;user.permissionProfiles.active;EQ, NE
-USER_DB;user.permissionProfiles.modifiedTimestamp;TIMESTAMP;;;;;;;;user.permissionProfiles.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
-USER_DB;user.permissionProfiles.modifiedTimestamp;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;user.permissionProfiles.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-USER_DB;user.identity.id;LONG;;;;;;;STAFF_DB;user.identity.id;EQ, NE
-USER_DB;user.identity.category.id;LONG;StaffCategory;getAllStaffCategories;getName;getId;;;;user.identity.category.id;EQ, NE
-USER_DB;user.authMethod;STRING;AuthenticationType;getAuthenticationTypes;getName;getMethod.name;;;;user.authMethod;EQ, NE
-MASS_MAIL_DB;massMail.id;LONG;;;;;;;;massMail.id;EQ, NE, TRUE
-MASS_MAIL_DB;massMail.department.id;LONG;Department;getAllDepartments;getName;getId;;;;massMail.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
-MASS_MAIL_DB;massMail.name;STRING;;;;;;;;massMail.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-MASS_MAIL_DB;massMail.start;TIMESTAMP;;;;;;;;massMail.start;EQ, NE, GT, GE, LT, LE
-MASS_MAIL_DB;massMail.start;STRING;VariablePeriod;getVariablePeriodsWoExplicit;getName;getPeriod.name;;;;massMail.start.startByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
-MASS_MAIL_DB;massMail.status.id;LONG;TrialStatusType;getAllMassMailStatusTypes;getName;getId;;;;massMail.status.id;EQ, NE
-MASS_MAIL_DB;massMail.type.id;LONG;TrialType;getAllMassMailTypes;getName;getId;;;;massMail.type.id;EQ, NE
-MASS_MAIL_DB;massMail.trial.id;LONG;;;;;;;TRIAL_DB;massMail.trial.id;EQ, NE
-MASS_MAIL_DB;massMail.probandListStatus.id;LONG;;getAllProbandListStatusTypes;getName;getId;;;;massMail.probandListStatus.id;EQ, NE
-MASS_MAIL_DB;massMail.fromAddress;STRING;;;;;;;;massMail.fromAddress;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-MASS_MAIL_DB;massMail.fromName;STRING;;;;;;;;massMail.fromName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-MASS_MAIL_DB;massMail.locale;STRING;;getLocales;getName;getLanguage;;;;massMail.locale;EQ, NE
-MASS_MAIL_DB;massMail.textTemplate;STRING;;;;;;;;massMail.textTemplate;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
-MASS_MAIL_DB;massMail.probandTo;BOOLEAN;;;;;;;;massMail.probandTo;EQ, NE
-MASS_MAIL_DB;massMail.physicianTo;BOOLEAN;;;;;;;;massMail.physicianTo;EQ, NE
-MASS_MAIL_DB;massMail.useBeacon;BOOLEAN;;;;;;;;massMail.useBeacon;EQ, NE
-MASS_MAIL_DB;massMail.recipients;LONG;;;;;;;;massMail.recipients;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
-MASS_MAIL_DB;massMail.recipients.proband.id;LONG;;;;;;;PROBAND_DB;massMail.recipients.proband.id;EQ, NE
+#module;property;value_type;entity;selection_set_service_method_name;get_name_method_name;get_value_method_name;complete_method_name;jsf_converter;filter_items_getter_name;picker;name_l10n_key;valid_restrictions
+INVENTORY_DB;inventory.id;LONG;;;;;;;;;inventory.id;EQ, NE, TRUE
+INVENTORY_DB;inventory.department.id;LONG;Department;;;;;;getFilterDepartments;;inventory.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+INVENTORY_DB;inventory.category.id;LONG;InventoryCategory;;;;;;getFilterInventoryCategories;;inventory.category.id;EQ, NE
+INVENTORY_DB;inventory.name;STRING;;;;;;;;;inventory.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INVENTORY_DB;inventory.bookable;BOOLEAN;;;;;;;;;inventory.bookable;EQ, NE
+INVENTORY_DB;inventory.deferredDelete;BOOLEAN;;;;;;;;;inventory.deferredDelete;EQ, NE
+INVENTORY_DB;inventory.parent.id;LONG;;;;;;;;INVENTORY_DB;inventory.parent.id;EQ, NE, IS_NULL
+INVENTORY_DB;inventory.owner.id;LONG;;;;;;;;STAFF_DB;inventory.owner.id;EQ, NE, IS_NULL, IS_EQ_CONTEXT_IDENTITY_ID
+INVENTORY_DB;inventory.tagValues.value;STRING;;;;;;;;;inventory.tagValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INVENTORY_DB;inventory.tagValues.tag.id;LONG;InventoryTag;getAllInventoryTags;getName;getId;;;;;inventory.tagValues.tag.id;EQ, NE
+INVENTORY_DB;inventory.tagValues;LONG;;;;;;;;;inventory.tagValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+INVENTORY_DB;inventory.bookings.onBehalfOf.id;LONG;;;;;;;;STAFF_DB;inventory.bookings.onBehalfOf.id;EQ, NE, IS_EQ_CONTEXT_IDENTITY_ID
+INVENTORY_DB;inventory.bookings.proband.id;LONG;;;;;;;;PROBAND_DB;inventory.bookings.proband.id;EQ, NE
+INVENTORY_DB;inventory.bookings.trial.id;LONG;;;;;;;;TRIAL_DB;inventory.bookings.trial.id;EQ, NE
+INVENTORY_DB;inventory.bookings.course.id;LONG;;;;;;;;COURSE_DB;inventory.bookings.course.id;EQ, NE
+INVENTORY_DB;inventory.statusEntries.start;TIMESTAMP;;;;;;;;;inventory.statusEntries.start;EQ, NE, GT, GE, LT, LE
+INVENTORY_DB;inventory.statusEntries.start;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;inventory.statusEntries.startByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+INVENTORY_DB;inventory.statusEntries.stop;TIMESTAMP;;;;;;;;;inventory.statusEntries.stop;IS_NULL, EQ, NE, GT, GE, LT, LE
+INVENTORY_DB;inventory.statusEntries.stop;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;inventory.statusEntries.stopByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+INVENTORY_DB;inventory.statusEntries.type.id;LONG;InventoryStatusType;;;;;;getFilterInventoryStatusTypes;;inventory.statusEntries.type.id;EQ, NE
+INVENTORY_DB;inventory.statusEntries.type.inventoryActive;BOOLEAN;;;;;;;;;inventory.statusEntries.type.inventoryActive;EQ, NE
+STAFF_DB;staff.id;LONG;;;;;;;;;staff.id;EQ, NE, TRUE
+STAFF_DB;staff.department.id;LONG;Department;;;;;;getFilterDepartments;;staff.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+STAFF_DB;staff.category.id;LONG;StaffCategory;;;;;;getFilterStaffCategories;;staff.category.id;EQ, NE
+STAFF_DB;staff.personParticulars.firstName;STRING;;;;;;;;;staff.personParticulars.firstName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+STAFF_DB;staff.personParticulars.lastName;STRING;;;;;;;;;staff.personParticulars.lastName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+STAFF_DB;staff.organisationParticulars.organisationName;STRING;;;;;;;;;staff.organisationParticulars.organisationName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+STAFF_DB;staff.personParticulars.dateOfBirth;DATE;;;;;;;;;staff.personParticulars.dateOfBirth;EQ, NE, GT, GE, LT, LE
+STAFF_DB;staff.person;BOOLEAN;;;;;;;;;staff.person;EQ, NE
+STAFF_DB;staff.employee;BOOLEAN;;;;;;;;;staff.employee;EQ, NE
+STAFF_DB;staff.allocatable;BOOLEAN;;;;;;;;;staff.allocatable;EQ, NE
+STAFF_DB;staff.deferredDelete;BOOLEAN;;;;;;;;;staff.deferredDelete;EQ, NE
+STAFF_DB;staff.parent.id;LONG;;;;;;;;STAFF_DB;staff.parent.id;EQ, NE, IS_EQ_CONTEXT_IDENTITY_ID
+STAFF_DB;staff.trialMemberships.trial.id;LONG;;;;;;;;TRIAL_DB;staff.trialMemberships.trial.id;EQ, NE
+STAFF_DB;staff.participations.course.id;LONG;;;;;;;;COURSE_DB;staff.participations.course.id;EQ, NE
+STAFF_DB;staff.participations.course.category.id;LONG;CourseCategory;;;;;;getFilterCourseCategories;;staff.participations.course.category.id;EQ, NE
+STAFF_DB;staff.participations.course.trial.id;LONG;;;;;;;;TRIAL_DB;staff.participations.course.trial.id;EQ, NE
+STAFF_DB;staff.participations.course.stop;DATE;;;;;;;;;staff.participations.course.stop;EQ, NE, GT, GE, LT, LE
+STAFF_DB;staff.participations.course.stop;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;staff.participations.course.stopByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+STAFF_DB;staff.participations;LONG;;;;;;;;;staff.participations;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+STAFF_DB;staff.cvPositions;LONG;;;;;;;;;staff.cvPositions;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+STAFF_DB;staff.cvPositions.section.id;LONG;CvSection;;;;;;getFilterCvSections;;staff.cvPositions.section.id;EQ, NE
+STAFF_DB;staff.tagValues.value;STRING;;;;;;;;;staff.tagValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+STAFF_DB;staff.tagValues.tag.id;LONG;StaffTag;getAllStaffTags;getName;getId;;;;;staff.tagValues.tag.id;EQ, NE
+STAFF_DB;staff.tagValues;LONG;;;;;;;;;staff.tagValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+STAFF_DB;staff.contactDetailValues.value;STRING;;;;;;;;;staff.contactDetailValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+STAFF_DB;staff.contactDetailValues.type.id;LONG;ContactDetailType;;;;;;getFilterContactDetailTypes;;staff.contactDetailValues.type.id;EQ, NE
+STAFF_DB;staff.contactDetailValues;LONG;;;;;;;;;staff.contactDetailValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+STAFF_DB;staff.contactDetailValues.na;BOOLEAN;;;;;;;;;staff.contactDetailValues.na;EQ, NE
+STAFF_DB;staff.files;LONG;;;;;;;;;staff.files;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+STAFF_DB;staff.statusEntries.start;TIMESTAMP;;;;;;;;;staff.statusEntries.start;EQ, NE, GT, GE, LT, LE
+STAFF_DB;staff.statusEntries.start;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;staff.statusEntries.startByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+STAFF_DB;staff.statusEntries.stop;TIMESTAMP;;;;;;;;;staff.statusEntries.stop;IS_NULL, EQ, NE, GT, GE, LT, LE
+STAFF_DB;staff.statusEntries.stop;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;staff.statusEntries.stopByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+STAFF_DB;staff.statusEntries.type.id;LONG;StaffStatusType;;;;;;getFilterStaffStatusTypes;;staff.statusEntries.type.id;EQ, NE
+STAFF_DB;staff.statusEntries.type.staffActive;BOOLEAN;;;;;;;;;staff.statusEntries.type.staffActive;EQ, NE
+STAFF_DB;staff.dutyRosterTurns.trial.id;LONG;;;;;;;;TRIAL_DB;staff.dutyRosterTurns.trial.id;EQ, NE
+STAFF_DB;staff.dutyRosterTurns.start;TIMESTAMP;;;;;;;;;staff.dutyRosterTurns.start;EQ, NE, GT, GE, LT, LE
+STAFF_DB;staff.dutyRosterTurns.start;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;staff.dutyRosterTurns.startByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+STAFF_DB;staff.dutyRosterTurns.stop;TIMESTAMP;;;;;;;;;staff.dutyRosterTurns.stop;EQ, NE, GT, GE, LT, LE
+STAFF_DB;staff.dutyRosterTurns.stop;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;staff.dutyRosterTurns.stopByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+COURSE_DB;course.id;LONG;;;;;;;;;course.id;EQ, NE, TRUE
+COURSE_DB;course.department.id;LONG;Department;;;;;;getFilterDepartments;;course.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+COURSE_DB;course.category.id;LONG;CourseCategory;;;;;;getFilterCourseCategories;;course.category.id;EQ, NE
+COURSE_DB;course.trial.id;LONG;;;;;;;;TRIAL_DB;course.trial.id;EQ, NE
+COURSE_DB;course.name;STRING;;;;;;;;;course.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+COURSE_DB;course.stop;DATE;;;;;;;;;course.stop;EQ, NE, GT, GE, LT, LE
+COURSE_DB;course.stop;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;course.stopByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+COURSE_DB;course.participationDeadline;TIMESTAMP;;;;;;;;;course.participationDeadline;EQ, NE, GT, GE, LT, LE
+COURSE_DB;course.participationDeadline;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;course.participationByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+COURSE_DB;course.showCvPreset;BOOLEAN;;;;;;;;;course.showCvPreset;EQ, NE
+COURSE_DB;course.expires;BOOLEAN;;;;;;;;;course.expires;EQ, NE
+COURSE_DB;course.validityPeriod;STRING;VariablePeriod;;;;;;getFilterVariablePeriods;;course.validityPeriod;EQ, NE
+COURSE_DB;course.selfRegistration;BOOLEAN;;;;;;;;;course.selfRegistration;EQ, NE
+COURSE_DB;course.renewals.id;LONG;;;;;;;;COURSE_DB;course.renewals.id;EQ, NE
+COURSE_DB;course.deferredDelete;BOOLEAN;;;;;;;;;course.deferredDelete;EQ, NE
+COURSE_DB;course.renewals;LONG;;;;;;;;;course.renewals;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+COURSE_DB;course.precedingCourses.id;LONG;;;;;;;;COURSE_DB;course.precedingCourses.id;EQ, NE
+COURSE_DB;course.precedingCourses;LONG;;;;;;;;;course.precedingCourses;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+COURSE_DB;course.lecturers.staff.id;LONG;;;;;;;;STAFF_DB;course.lecturers.staff.id;EQ, NE, IS_EQ_CONTEXT_IDENTITY_ID
+COURSE_DB;course.lecturers;LONG;;;;;;;;;course.lecturers;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+TRIAL_DB;trial.id;LONG;;;;;;;;;trial.id;EQ, NE, TRUE
+TRIAL_DB;trial.department.id;LONG;Department;;;;;;getFilterDepartments;;trial.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+TRIAL_DB;trial.name;STRING;;;;;;;;;trial.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+TRIAL_DB;trial.status.id;LONG;TrialStatusType;;;;;;getFilterTrialStatusTypes;;trial.status.id;EQ, NE
+TRIAL_DB;trial.type.id;LONG;TrialType;;;;;;getFilterTrialTypes;;trial.type.id;EQ, NE
+TRIAL_DB;trial.sponsoring.id;LONG;SponsoringType;;;;;;getFilterSponsoringTypes;;trial.sponsoring.id;EQ, NE
+TRIAL_DB;trial.dutySelfAllocationLocked;BOOLEAN;;;;;;;;;trial.dutySelfAllocationLocked;EQ, NE
+TRIAL_DB;trial.dutySelfAllocationLockedUntil;TIMESTAMP;;;;;;;;;trial.dutySelfAllocationLockedUntil;IS_NULL, EQ, NE, GT, GE, LT, LE
+TRIAL_DB;trial.dutySelfAllocationLockedUntil;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;trial.dutySelfAllocationLockedUntilByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+TRIAL_DB;trial.dutySelfAllocationLockedFrom;TIMESTAMP;;;;;;;;;trial.dutySelfAllocationLockedFrom;IS_NULL, EQ, NE, GT, GE, LT, LE
+TRIAL_DB;trial.dutySelfAllocationLockedFrom;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;trial.dutySelfAllocationLockedFromByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+TRIAL_DB;trial.randomization;STRING;RandomizationMode;;;;;;getFilterRandomizationModes;;trial.randomization;EQ, NE
+TRIAL_DB;trial.exclusiveProbands;BOOLEAN;;;;;;;;;trial.exclusiveProbands;EQ, NE
+TRIAL_DB;trial.signupProbandList;BOOLEAN;;;;;;;;;trial.signupProbandList;EQ, NE
+TRIAL_DB;trial.signupInquiries;BOOLEAN;;;;;;;;;trial.signupInquiries;EQ, NE
+TRIAL_DB;trial.deferredDelete;BOOLEAN;;;;;;;;;trial.deferredDelete;EQ, NE
+TRIAL_DB;trial.surveyStatus.id;LONG;SurveyStatusType;;;;;;getFilterSurveyStatusTypes;;trial.surveyStatus.id;EQ, NE
+TRIAL_DB;trial.members.staff.id;LONG;;;;;;;;STAFF_DB;trial.members.staff.id;EQ, NE, IS_EQ_CONTEXT_IDENTITY_ID
+TRIAL_DB;trial.members.role.id;LONG;TeamMemberRole;;;;;;getFilterTeamMemberRoles;;trial.members.role.id;EQ, NE
+TRIAL_DB;trial.members;LONG;;;;;;;;;trial.members;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+TRIAL_DB;trial.probandListEntries.proband.id;LONG;;;;;;;;PROBAND_DB;trial.probandListEntries.proband.id;EQ, NE
+TRIAL_DB;trial.probandListEntries;LONG;;;;;;;;;trial.probandListEntries;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+TRIAL_DB;trial.tagValues.value;STRING;;;;;;;;;trial.tagValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+TRIAL_DB;trial.tagValues.tag.id;LONG;TrialTag;getAllTrialTags;getName;getId;;;;;trial.tagValues.tag.id;EQ, NE
+TRIAL_DB;trial.tagValues;LONG;;;;;;;;;trial.tagValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+TRIAL_DB;trial.dutyRosterTurns;LONG;;;;;;;;;trial.dutyRosterTurns;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+TRIAL_DB;trial.courses;LONG;;;;;;;;;trial.courses;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+INPUT_FIELD_DB;inputField.id;LONG;;;;;;;;;inputField.id;EQ, NE, TRUE
+INPUT_FIELD_DB;inputField.nameL10nKey;STRING;;;;;;;;;inputField.nameL10nKey;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INPUT_FIELD_DB;inputField.titleL10nKey;STRING;;;;;;;;;inputField.titleL10nKey;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INPUT_FIELD_DB;inputField.externalId;STRING;;;;;;;;;inputField.externalId;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INPUT_FIELD_DB;inputField.localized;BOOLEAN;;;;;;;;;inputField.localized;EQ, NE
+#INPUT_FIELD_DB;inputField.timePreset;LONG;;;;;;;;;inputField.timePreset_LONG;HOUR_GT,HOUR_LT,MINUTE_GT,MINUTE_LT
+#INPUT_FIELD_DB;inputField.timePreset;TIME;;;;;;;;;inputField.timePreset_TIME;EQ, GT, LT, NE
+INPUT_FIELD_DB;inputField.inquiries.trial.id;LONG;;;;;;;;TRIAL_DB;inputField.inquiries.trial.id;EQ, NE
+INPUT_FIELD_DB;inputField.listEntryTags.trial.id;LONG;;;;;;;;TRIAL_DB;inputField.listEntryTags.trial.id;EQ, NE
+INPUT_FIELD_DB;inputField.ecrfFields.trial.id;LONG;;;;;;;;TRIAL_DB;inputField.ecrfFields.trial.id;EQ, NE
+INPUT_FIELD_DB;inputField.selectionSetValues;LONG;;;;;;;;;inputField.selectionSetValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+INPUT_FIELD_DB;inputField.selectionSetValues.nameL10nKey;STRING;;;;;;;;;inputField.selectionSetValues.nameL10nKey;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INPUT_FIELD_DB;inputField.selectionSetValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;;inputField.selectionSetValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INPUT_FIELD_DB;inputField.fieldType;STRING;InputFieldType;;;;;;getFilterInputFieldTypes;;inputField.fieldType;EQ, NE
+INPUT_FIELD_DB;inputField.category;STRING;;;;;;;;;inputField.category;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+INPUT_FIELD_DB;inputField.deferredDelete;BOOLEAN;;;;;;;;;inputField.deferredDelete;EQ, NE
+PROBAND_DB;proband.id;LONG;;;;;;;;;proband.id;EQ, NE, TRUE
+PROBAND_DB;proband.department.id;LONG;Department;;;;;;getFilterDepartments;;proband.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+PROBAND_DB;proband.category.id;LONG;ProbandCategory;;;;;;getFilterProbandCategories;;proband.category.id;EQ, NE
+PROBAND_DB;proband.personParticulars.firstNameHash;STRING_HASH;;;;;;;;;proband.personParticulars.firstNameHash;EQ, NE
+PROBAND_DB;proband.personParticulars.lastNameHash;STRING_HASH;;;;;;;;;proband.personParticulars.lastNameHash;EQ, NE
+PROBAND_DB;proband.personParticulars.lastNameIndex;STRING;;;;;;;;;proband.personParticulars.lastNameIndex;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.personParticulars.dateOfBirthHash;DATE_HASH;;;;;;;;;proband.personParticulars.dateOfBirthHash;EQ, NE
+PROBAND_DB;proband.personParticulars.yearOfBirth;LONG;;;;;;;;;proband.personParticulars.yearOfBirth;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.personParticulars.gender;STRING;Sex;;;;;;getFilterSexes;;proband.personParticulars.gender;EQ, NE
+PROBAND_DB;proband.personParticulars.alias;STRING;;;;;;;;;proband.personParticulars.alias;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.animalParticulars.animalName;STRING;;;;;;;;;proband.animalParticulars.animalName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.animalParticulars.dateOfBirth;DATE;;;;;;;;;proband.animalParticulars.dateOfBirth;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.animalParticulars.gender;STRING;Sex;;;;;;getFilterSexes;;proband.animalParticulars.gender;EQ, NE
+PROBAND_DB;proband.animalParticulars.alias;STRING;;;;;;;;;proband.animalParticulars.alias;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+#PROBAND_DB;proband.available;BOOLEAN;;;;;;;;;proband.available;EQ, NE
+PROBAND_DB;proband.person;BOOLEAN;;;;;;;;;proband.person;EQ, NE
+PROBAND_DB;proband.blinded;BOOLEAN;;;;;;;;;proband.blinded;EQ, NE
+PROBAND_DB;proband.physician.id;LONG;;;;;;;;STAFF_DB;proband.physician.id;EQ, NE, IS_NULL, IS_EQ_CONTEXT_IDENTITY_ID
+PROBAND_DB;proband.deferredDelete;BOOLEAN;;;;;;;;;proband.deferredDelete;EQ, NE
+PROBAND_DB;proband.category.locked;BOOLEAN;;;;;;;;;proband.category.locked;EQ, NE
+#PROBAND_DB;proband.recruitmentForOtherTrialsAllowed;BOOLEAN;;;;;;;;;proband.recruitmentForOtherTrialsAllowed;EQ, NE
+PROBAND_DB;proband.privacyConsentStatus.id;LONG;PrivacyConsentStatusType;;;;;;getFilterPrivacyConsentStatusTypes;;proband.privacyConsentStatus.id;EQ, NE
+PROBAND_DB;proband.privacyConsentStatus.autoDelete;BOOLEAN;;;;;;;;;proband.privacyConsentStatus.autoDelete;EQ, NE
+PROBAND_DB;proband.autoDeleteDeadline;DATE;;;;;;;;;proband.autoDeleteDeadline;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.autoDeleteDeadline;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.autoDeleteDeadlineByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+PROBAND_DB;proband.diagnoses.code.systematics.blocks.preferredRubricLabel;STRING;;;;;completeIcdSystBlockPreferredRubricLabel;;;;proband.diagnoses.code.systematics.blocks.preferredRubricLabel;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.diagnoses.code.systematics.categories.preferredRubricLabel;STRING;;;;;completeIcdSystCategoryPreferredRubricLabel;;;;proband.diagnoses.code.systematics.categories.preferredRubricLabel;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.diagnoses.code.text;STRING;;;;;completeAlphaIdText;;;;proband.diagnoses.code.text;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.diagnoses.code.primaryCode;STRING;;;;;completeAlphaIdCode;;;;proband.diagnoses.code.primaryCode;EQ, NE, LIKE, ILIKE
+PROBAND_DB;proband.diagnoses.start;DATE;;;;;;;;;proband.diagnoses.start;IS_NULL, EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.diagnoses.start;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.diagnoses.startByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+PROBAND_DB;proband.diagnoses.stop;DATE;;;;;;;;;proband.diagnoses.stop;IS_NULL, EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.diagnoses.stop;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.diagnoses.stopByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+PROBAND_DB;proband.diagnoses;LONG;;;;;;;;;proband.diagnoses;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+PROBAND_DB;proband.medications.asp.name;STRING;;;;;completeAspName;;;;proband.medications.asp.name;EQ, NE, LIKE, ILIKE
+PROBAND_DB;proband.medications.asp.atcCodes.code;STRING;;;;;completeAspAtcCodeCode;;;;proband.medications.asp.atcCodes.code;EQ, NE, LIKE, ILIKE
+PROBAND_DB;proband.medications.substances.name;STRING;;;;;completeAspSubstanceName;;;;proband.medications.substances.name;EQ, NE, LIKE, ILIKE
+PROBAND_DB;proband.medications.start;DATE;;;;;;;;;proband.medications.start;IS_NULL, EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.medications.start;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.medications.startByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+PROBAND_DB;proband.medications.stop;DATE;;;;;;;;;proband.medications.stop;IS_NULL, EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.medications.stop;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.medications.stopByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+PROBAND_DB;proband.medications;LONG;;;;;;;;;proband.medications;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+PROBAND_DB;proband.procedures.code.systematics.blocks.preferredRubricLabel;STRING;;;;;completeOpsSystBlockPreferredRubricLabel;;;;proband.procedures.code.systematics.blocks.preferredRubricLabel;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.procedures.code.systematics.categories.preferredRubricLabel;STRING;;;;;completeOpsSystCategoryPreferredRubricLabel;;;;proband.procedures.code.systematics.categories.preferredRubricLabel;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.procedures.code.text;STRING;;;;;completeOpsCodeText;;;;proband.procedures.code.text;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.procedures.code.firstCode;STRING;;;;;completeOpsCodeCode;;;;proband.procedures.code.firstCode;EQ, NE, LIKE, ILIKE
+PROBAND_DB;proband.procedures.start;DATE;;;;;;;;;proband.procedures.start;IS_NULL, EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.procedures.start;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.procedures.startByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+PROBAND_DB;proband.procedures.stop;DATE;;;;;;;;;proband.procedures.stop;IS_NULL, EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.procedures.stop;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.procedures.stopByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+PROBAND_DB;proband.procedures;LONG;;;;;;;;;proband.procedures;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+PROBAND_DB;proband.addresses.type.id;LONG;AddressType;getAllAddressTypes;getName;getId;;;;;proband.addresses.type.id;EQ, NE
+PROBAND_DB;proband.addresses.cityNameHash;STRING_HASH;;;;;completeCityName;;;;proband.addresses.cityNameHash;EQ, NE
+PROBAND_DB;proband.addresses.zipCodeHash;STRING_HASH;;;;;completeZipCode;;;;proband.addresses.zipCodeHash;EQ, NE
+PROBAND_DB;proband.addresses;LONG;;;;;;;;;proband.addresses;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+#PROBAND_DB;proband.inquiryValues.inquiry.id;LONG;Inquiry;getAllInquiries;getUniqueName;getId;;;;;proband.inquiryValues.inquiry.id;EQ, NE
+PROBAND_DB;proband.inquiryValues.inquiry.id;LONG;Inquiry;;getUniqueName;;completeInquiry;ctsms.Inquiry;;;proband.inquiryValues.inquiry.id;EQ, NE
+#PROBAND_DB;proband.inquiryValues.inquiry.field.id;LONG;InputField;getAllInquiryInputFields;getName;getId;;;;;proband.inquiryValues.inquiry.field.id;EQ, NE
+PROBAND_DB;proband.inquiryValues.inquiry.field.id;LONG;InputField;;getName;;completeInquiryInputField;ctsms.InputField;;;proband.inquiryValues.inquiry.field.id;EQ, NE
+PROBAND_DB;proband.inquiryValues;LONG;;;;;;;;;proband.inquiryValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+PROBAND_DB;proband.inquiryValues.inquiry.trial.id;LONG;;;;;;;;TRIAL_DB;proband.inquiryValues.inquiry.trial.id;EQ, NE
+PROBAND_DB;proband.inquiryValues.modifiedTimestamp;TIMESTAMP;;;;;;;;;proband.inquiryValues.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.inquiryValues.modifiedTimestamp;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.inquiryValues.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+PROBAND_DB;proband.inquiryValues.value.stringValue;STRING;;;;;completeInputFieldTextValue;;;;proband.inquiryValues.value.stringValue;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.inquiryValues.value.booleanValue;BOOLEAN;;;;;;;;;proband.inquiryValues.value.booleanValue;EQ, NE
+PROBAND_DB;proband.inquiryValues.value.longValue;LONG;;;;;;;;;proband.inquiryValues.value.longValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.inquiryValues.value.floatValue;FLOAT;;;;;;;;;proband.inquiryValues.value.floatValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.inquiryValues.value.dateValue;DATE;;;;;;;;;proband.inquiryValues.value.dateValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.inquiryValues.value.dateValue;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.inquiryValues.value.dateValueByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+PROBAND_DB;proband.inquiryValues.value.timestampValue;TIMESTAMP;;;;;;;;;proband.inquiryValues.value.timestampValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.inquiryValues.value.timestampValue;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.inquiryValues.value.timestampValueByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+PROBAND_DB;proband.inquiryValues.value.timeValue;TIME;;;;;;;;;proband.inquiryValues.value.timeValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.inquiryValues.value.timeValue;LONG;;;;;;;;;proband.inquiryValues.value.timeValueByHourMinute;HOUR_EQ, HOUR_GE, HOUR_GT, HOUR_LE, HOUR_LT, HOUR_NE, MINUTE_EQ, MINUTE_GE, MINUTE_GT, MINUTE_LE, MINUTE_LT, MINUTE_NE
+#PROBAND_DB;proband.inquiryValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;getAllInquiryInputFieldSelectionSetValues;getUniqueName;getId;;;;;proband.inquiryValues.value.selectionValues.id;EQ, NE
+PROBAND_DB;proband.inquiryValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;;getUniqueName;;completeInquiryInputFieldSelectionSetValue;ctsms.InputFieldSelectionSetValue;;;proband.inquiryValues.value.selectionValues.id;EQ, NE
+PROBAND_DB;proband.inquiryValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;;proband.inquiryValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.inquiryValues.value.selectionValues;LONG;;;;;;;;;proband.inquiryValues.value.selectionValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+#PROBAND_DB;proband.trialParticipations.tagValues.tag.id;LONG;ProbandListEntryTag;getAllProbandListEntryTags;getUniqueName;getId;;;;;proband.trialParticipations.tagValues.tag.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.tagValues.tag.id;LONG;ProbandListEntryTag;;getUniqueName;;completeProbandListEntryTag;ctsms.ProbandListEntryTag;;;proband.trialParticipations.tagValues.tag.id;EQ, NE
+#PROBAND_DB;proband.trialParticipations.tagValues.tag.field.id;LONG;InputField;getAllProbandListEntryTagInputFields;getName;getId;;;;;proband.trialParticipations.tagValues.tag.field.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.tagValues.tag.field.id;LONG;InputField;;getName;;completeProbandListEntryTagInputField;ctsms.InputField;;;proband.trialParticipations.tagValues.tag.field.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.tagValues;LONG;;;;;;;;;proband.trialParticipations.tagValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+#PROBAND_DB;proband.trialParticipations.trial.id;LONG;;;;;;;;TRIAL_DB;proband.trialParticipations.trial.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.tagValues.modifiedTimestamp;TIMESTAMP;;;;;;;;;proband.trialParticipations.tagValues.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.tagValues.modifiedTimestamp;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.trialParticipations.tagValues.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+PROBAND_DB;proband.trialParticipations.tagValues.value.stringValue;STRING;;;;;completeInputFieldTextValue;;;;proband.trialParticipations.tagValues.value.stringValue;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.trialParticipations.tagValues.value.booleanValue;BOOLEAN;;;;;;;;;proband.trialParticipations.tagValues.value.booleanValue;EQ, NE
+PROBAND_DB;proband.trialParticipations.tagValues.value.longValue;LONG;;;;;;;;;proband.trialParticipations.tagValues.value.longValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.tagValues.value.floatValue;FLOAT;;;;;;;;;proband.trialParticipations.tagValues.value.floatValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.tagValues.value.dateValue;DATE;;;;;;;;;proband.trialParticipations.tagValues.value.dateValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.tagValues.value.dateValue;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.trialParticipations.tagValues.value.dateValueByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+PROBAND_DB;proband.trialParticipations.tagValues.value.timestampValue;TIMESTAMP;;;;;;;;;proband.trialParticipations.tagValues.value.timestampValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.tagValues.value.timestampValue;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.trialParticipations.tagValues.value.timestampValueByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+PROBAND_DB;proband.trialParticipations.tagValues.value.timeValue;TIME;;;;;;;;;proband.trialParticipations.tagValues.value.timeValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.tagValues.value.timeValue;LONG;;;;;;;;;proband.trialParticipations.tagValues.value.timeValueByHourMinute;HOUR_EQ, HOUR_GE, HOUR_GT, HOUR_LE, HOUR_LT, HOUR_NE, MINUTE_EQ, MINUTE_GE, MINUTE_GT, MINUTE_LE, MINUTE_LT, MINUTE_NE
+#PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;getAllProbandListEntryTagInputFieldSelectionSetValues;getUniqueName;getId;;;;;proband.trialParticipations.tagValues.value.selectionValues.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;;getUniqueName;;completeProbandListEntryTagInputFieldSelectionSetValue;ctsms.InputFieldSelectionSetValue;;;proband.trialParticipations.tagValues.value.selectionValues.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;;proband.trialParticipations.tagValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.trialParticipations.tagValues.value.selectionValues;LONG;;;;;;;;;proband.trialParticipations.tagValues.value.selectionValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+PROBAND_DB;proband.tagValues.valueHash;STRING_HASH;;;;;;;;;proband.tagValues.valueHash;EQ, NE
+PROBAND_DB;proband.tagValues.tag.id;LONG;ProbandTag;getAllProbandTags;getName;getId;;;;;proband.tagValues.tag.id;EQ, NE
+PROBAND_DB;proband.tagValues;LONG;;;;;;;;;proband.tagValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+#PROBAND_DB;proband.trialParticipations.ecrfValues.ecrfField.id;LONG;ECRFField;getAllEcrfFields;getUniqueName;getId;;;;;proband.trialParticipations.ecrfValues.ecrfField.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.ecrfValues.ecrfField.id;LONG;ECRFField;;getUniqueName;;completeEcrfField;ctsms.EcrfField;;;proband.trialParticipations.ecrfValues.ecrfField.id;EQ, NE
+#PROBAND_DB;proband.trialParticipations.ecrfValues.ecrfField.field.id;LONG;InputField;getAllEcrfFieldInputFields;getName;getId;;;;;proband.trialParticipations.ecrfValues.ecrfField.field.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.ecrfValues.ecrfField.field.id;LONG;InputField;;getName;;completeEcrfFieldInputField;ctsms.InputField;;;proband.trialParticipations.ecrfValues.ecrfField.field.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.ecrfValues;LONG;;;;;;;;;proband.trialParticipations.ecrfValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+#PROBAND_DB;proband.trialParticipations.trial.id;LONG;;;;;;;;TRIAL_DB;proband.trialParticipations.trial.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.ecrfValues.modifiedTimestamp;TIMESTAMP;;;;;;;;;proband.trialParticipations.ecrfValues.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.ecrfValues.modifiedTimestamp;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.trialParticipations.ecrfValues.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.stringValue;STRING;;;;;completeInputFieldTextValue;;;;proband.trialParticipations.ecrfValues.value.stringValue;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.booleanValue;BOOLEAN;;;;;;;;;proband.trialParticipations.ecrfValues.value.booleanValue;EQ, NE
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.longValue;LONG;;;;;;;;;proband.trialParticipations.ecrfValues.value.longValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.floatValue;FLOAT;;;;;;;;;proband.trialParticipations.ecrfValues.value.floatValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.dateValue;DATE;;;;;;;;;proband.trialParticipations.ecrfValues.value.dateValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.dateValue;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.trialParticipations.ecrfValues.value.dateValueByPeriod;IS_EQ_TODAY, IS_NE_TODAY, IS_GT_TODAY, IS_GE_TODAY, IS_LT_TODAY, IS_LE_TODAY, IS_GT_TODAY_PLUS_PERIOD, IS_GE_TODAY_PLUS_PERIOD, IS_EQ_TODAY_PLUS_PERIOD, IS_NE_TODAY_PLUS_PERIOD, IS_LT_TODAY_PLUS_PERIOD, IS_LE_TODAY_PLUS_PERIOD, IS_GT_TODAY_MINUS_PERIOD, IS_GE_TODAY_MINUS_PERIOD, IS_EQ_TODAY_MINUS_PERIOD, IS_NE_TODAY_MINUS_PERIOD, IS_LT_TODAY_MINUS_PERIOD, IS_LE_TODAY_MINUS_PERIOD
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.timestampValue;TIMESTAMP;;;;;;;;;proband.trialParticipations.ecrfValues.value.timestampValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.timestampValue;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.trialParticipations.ecrfValues.value.timestampValueByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.timeValue;TIME;;;;;;;;;proband.trialParticipations.ecrfValues.value.timeValue;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.timeValue;LONG;;;;;;;;;proband.trialParticipations.ecrfValues.value.timeValueByHourMinute;HOUR_EQ, HOUR_GE, HOUR_GT, HOUR_LE, HOUR_LT, HOUR_NE, MINUTE_EQ, MINUTE_GE, MINUTE_GT, MINUTE_LE, MINUTE_LT, MINUTE_NE
+#PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;getAllEcrfFieldInputFieldSelectionSetValues;getUniqueName;getId;;;;;proband.trialParticipations.ecrfValues.value.selectionValues.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues.id;LONG;InputFieldSelectionSetValue;;getUniqueName;;completeEcrfFieldInputFieldSelectionSetValue;ctsms.InputFieldSelectionSetValue;;;proband.trialParticipations.ecrfValues.value.selectionValues.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues.value;STRING;;;;;completeInputFieldSelectionSetValueValue;;;;proband.trialParticipations.ecrfValues.value.selectionValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.trialParticipations.ecrfValues.value.selectionValues;LONG;;;;;;;;;proband.trialParticipations.ecrfValues.value.selectionValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+PROBAND_DB;proband.contactDetailValues.valueHash;STRING_HASH;;;;;;;;;proband.contactDetailValues.valueHash;EQ, NE
+PROBAND_DB;proband.contactDetailValues.type.id;LONG;ContactDetailType;;;;;;getFilterContactDetailTypes;;proband.contactDetailValues.type.id;EQ, NE
+PROBAND_DB;proband.contactDetailValues;LONG;;;;;;;;;proband.contactDetailValues;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+PROBAND_DB;proband.contactDetailValues.na;BOOLEAN;;;;;;;;;proband.contactDetailValues.na;EQ, NE
+PROBAND_DB;proband.massMailReceipts.massMail.id;LONG;;;;;;;;MASS_MAIL_DB;proband.massMailReceipts.massMail.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.trial.id;LONG;;;;;;;;TRIAL_DB;proband.trialParticipations.trial.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.lastStatus.status.id;LONG;;;;;;;getFilterProbandListStatusTypes;;proband.trialParticipations.lastStatus.status.id;EQ, NE
+PROBAND_DB;proband.trialParticipations.lastStatus.realTimestamp;TIMESTAMP;;;;;;;;;proband.trialParticipations.lastStatus.realTimestamp;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.trialParticipations.lastStatus.realTimestamp;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.trialParticipations.lastStatus.realTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+PROBAND_DB;proband.files;LONG;;;;;;;;;proband.files;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+PROBAND_DB;proband.files.fileNameHash;STRING_HASH;;;;;;;;;proband.files.fileNameHash;EQ, NE
+PROBAND_DB;proband.journalEntries;LONG;;;;;;;;;proband.journalEntries;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+PROBAND_DB;proband.journalEntries.systemMessageCode;STRING;;;;;completeSystemMessageCode;;;;proband.journalEntries.systemMessageCode;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+PROBAND_DB;proband.journalEntries.modifiedTimestamp;TIMESTAMP;;;;;;;;;proband.journalEntries.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
+PROBAND_DB;proband.journalEntries.modifiedTimestamp;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.journalEntries.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+USER_DB;user.id;LONG;;;;;;;;;user.id;EQ, NE, TRUE
+USER_DB;user.department.id;LONG;Department;;;;;;getFilterDepartments;;user.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+USER_DB;user.name;STRING;;;;;;;;;user.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+USER_DB;user.locked;BOOLEAN;;;;;;;;;user.locked;EQ, NE
+USER_DB;user.decrypt;BOOLEAN;;;;;;;;;user.decrypt;EQ, NE
+USER_DB;user.decryptUntrusted;BOOLEAN;;;;;;;;;user.decryptUntrusted;EQ, NE
+USER_DB;user.deferredDelete;BOOLEAN;;;;;;;;;user.deferredDelete;EQ, NE
+USER_DB;user.permissionProfiles.profile;STRING;PermissionProfile;getPermissionProfiles;getProfileName;getProfile.name;;;;;user.permissionProfiles.profile;EQ, NE
+USER_DB;user.permissionProfiles.active;BOOLEAN;;;;;;;;;user.permissionProfiles.active;EQ, NE
+USER_DB;user.permissionProfiles.modifiedTimestamp;TIMESTAMP;;;;;;;;;user.permissionProfiles.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
+USER_DB;user.permissionProfiles.modifiedTimestamp;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;user.permissionProfiles.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+USER_DB;user.identity.id;LONG;;;;;;;;STAFF_DB;user.identity.id;EQ, NE
+USER_DB;user.identity.category.id;LONG;StaffCategory;;;;;;getFilterStaffCategories;;user.identity.category.id;EQ, NE
+USER_DB;user.authMethod;STRING;AuthenticationType;;;;;;getFilterAuthenticationTypes;;user.authMethod;EQ, NE
+MASS_MAIL_DB;massMail.id;LONG;;;;;;;;;massMail.id;EQ, NE, TRUE
+MASS_MAIL_DB;massMail.department.id;LONG;Department;;;;;;getFilterDepartments;;massMail.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+MASS_MAIL_DB;massMail.name;STRING;;;;;;;;;massMail.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+MASS_MAIL_DB;massMail.start;TIMESTAMP;;;;;;;;;massMail.start;EQ, NE, GT, GE, LT, LE
+MASS_MAIL_DB;massMail.start;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;massMail.start.startByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
+MASS_MAIL_DB;massMail.status.id;LONG;MassMailStatusType;;;;;;getFilterMassMailStatusTypes;;massMail.status.id;EQ, NE
+MASS_MAIL_DB;massMail.type.id;LONG;MassMailType;;;;;;getFilterMassMailTypes;;massMail.type.id;EQ, NE
+MASS_MAIL_DB;massMail.trial.id;LONG;;;;;;;;TRIAL_DB;massMail.trial.id;EQ, NE
+MASS_MAIL_DB;massMail.probandListStatus.id;LONG;;;;;;;getFilterProbandListStatusTypes;;massMail.probandListStatus.id;EQ, NE
+MASS_MAIL_DB;massMail.fromAddress;STRING;;;;;;;;;massMail.fromAddress;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+MASS_MAIL_DB;massMail.fromName;STRING;;;;;;;;;massMail.fromName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+MASS_MAIL_DB;massMail.locale;STRING;;;;;;;getFilterLocales;;massMail.locale;EQ, NE
+MASS_MAIL_DB;massMail.textTemplate;STRING;;;;;;;;;massMail.textTemplate;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
+MASS_MAIL_DB;massMail.probandTo;BOOLEAN;;;;;;;;;massMail.probandTo;EQ, NE
+MASS_MAIL_DB;massMail.physicianTo;BOOLEAN;;;;;;;;;massMail.physicianTo;EQ, NE
+MASS_MAIL_DB;massMail.useBeacon;BOOLEAN;;;;;;;;;massMail.useBeacon;EQ, NE
+MASS_MAIL_DB;massMail.recipients;LONG;;;;;;;;;massMail.recipients;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+MASS_MAIL_DB;massMail.recipients.proband.id;LONG;;;;;;;;PROBAND_DB;massMail.recipients.proband.id;EQ, NE
