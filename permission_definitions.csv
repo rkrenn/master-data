@@ -691,6 +691,9 @@ org.phoenixctms.ctsms.service.user.UserService.setDataTableColumns;;userId;;ANY_
 org.phoenixctms.ctsms.service.user.UserService.clearDataTableColumns;;userId;;ANY_USER,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,ACTIVE_USER;;;;USER_ALL_DEPARTMENTS,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,USER_ACTIVE_USER
 org.phoenixctms.ctsms.service.user.UserService.getDataTableColumnCount;;userId;;ANY_USER,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,ACTIVE_USER;;;;USER_ALL_DEPARTMENTS,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,USER_ACTIVE_USER
 org.phoenixctms.ctsms.service.user.UserService.updateUserSettings;;modifiedSettings.getId;;ANY_USER,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,ACTIVE_USER;;;;USER_ALL_DEPARTMENTS,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,USER_ACTIVE_USER
+org.phoenixctms.ctsms.service.user.UserService.isPropertiesAncestor;;userId;;ANY_USER,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,ACTIVE_USER;;;;USER_ALL_DEPARTMENTS,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,USER_ACTIVE_USER
+org.phoenixctms.ctsms.service.user.UserService.isPermissionProfileGroupsAncestor;;userId;;ANY_USER,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,ACTIVE_USER;;;;USER_ALL_DEPARTMENTS,USER_USER_DEPARTMENT,USER_IDENTITY_DEPARTMENT,USER_ACTIVE_USER
+org.phoenixctms.ctsms.service.user.UserService.getInheritedUser;;userId;;ANY_USER;;;;USER_ACTIVE_USER:USER_ALL_DEPARTMENTS:USER_USER_DEPARTMENT:USER_IDENTITY_DEPARTMENT
 ;;;;;;;;
 org.phoenixctms.ctsms.service.shared.InputFieldService.addInputField;;;;;;;;INPUT_FIELD_MASTER
 org.phoenixctms.ctsms.service.shared.InputFieldService.addSelectionSetValue;;;;;;;;INPUT_FIELD_MASTER
