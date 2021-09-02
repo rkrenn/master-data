@@ -266,6 +266,7 @@ USER_DB;user.id;LONG;;;;;;;;;user.id;EQ, NE, TRUE
 USER_DB;user.department.id;LONG;Department;;;;;;getFilterDepartments;;user.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
 USER_DB;user.name;STRING;;;;;;;;;user.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 USER_DB;user.locked;BOOLEAN;;;;;;;;;user.locked;EQ, NE
+USER_DB;user.parent.id;LONG;;;;;;;;USER_DB;user.parent.id;EQ, NE, IS_NULL
 USER_DB;user.decrypt;BOOLEAN;;;;;;;;;user.decrypt;EQ, NE
 USER_DB;user.decryptUntrusted;BOOLEAN;;;;;;;;;user.decryptUntrusted;EQ, NE
 USER_DB;user.deferredDelete;BOOLEAN;;;;;;;;;user.deferredDelete;EQ, NE
