@@ -1,0 +1,4 @@
+Palau;PW
+Federated States Of Micronesia;FM
+Republic of the Marshall Islands;MH
+United States;US
