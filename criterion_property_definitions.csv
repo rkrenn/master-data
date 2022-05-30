@@ -100,6 +100,9 @@ TRIAL_DB;trial.surveyStatus.id;LONG;SurveyStatusType;;;;;;getFilterSurveyStatusT
 TRIAL_DB;trial.members.staff.id;LONG;;;;;;;;STAFF_DB;trial.members.staff.id;EQ, NE, IS_EQ_CONTEXT_IDENTITY_ID
 TRIAL_DB;trial.members.role.id;LONG;TeamMemberRole;;;;;;getFilterTeamMemberRoles;;trial.members.role.id;EQ, NE
 TRIAL_DB;trial.members;LONG;;;;;;;;;trial.members;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
+TRIAL_DB;trial.events.type;LONG;;;;;;;getFilterTimelineEventTypes;;trial.events.type.id;EQ, NE
+TRIAL_DB;trial.events.start;TIMESTAMP;;;;;;;;;trial.events.start;IS_NULL, EQ, NE, GT, GE, LT, LE
+TRIAL_DB;trial.events.start;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;trial.events.startByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
 TRIAL_DB;trial.probandListEntries.proband.id;LONG;;;;;;;;PROBAND_DB;trial.probandListEntries.proband.id;EQ, NE
 TRIAL_DB;trial.probandListEntries;LONG;;;;;;;;;trial.probandListEntries;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
 TRIAL_DB;trial.tagValues.value;STRING;;;;;;;;;trial.tagValues.value;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
