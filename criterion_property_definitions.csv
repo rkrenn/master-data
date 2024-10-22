@@ -1,6 +1,6 @@
 #module;property;value_type;entity;selection_set_service_method_name;get_name_method_name;get_value_method_name;complete_method_name;jsf_converter;filter_items_getter_name;picker;name_l10n_key;valid_restrictions
 INVENTORY_DB;inventory.id;LONG;;;;;;;;;inventory.id;EQ, NE, TRUE
-INVENTORY_DB;inventory.department.id;LONG;Department;;;;;;getFilterDepartments;;inventory.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+INVENTORY_DB;inventory.department.id;LONG;Department;;getName;;completeDepartment;ctsms.Department;;;inventory.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
 INVENTORY_DB;inventory.category.id;LONG;InventoryCategory;;;;;;getFilterInventoryCategories;;inventory.category.id;EQ, NE
 INVENTORY_DB;inventory.name;STRING;;;;;;;;;inventory.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 INVENTORY_DB;inventory.bookable;BOOLEAN;;;;;;;;;inventory.bookable;EQ, NE
@@ -21,7 +21,7 @@ INVENTORY_DB;inventory.statusEntries.stop;STRING;VariablePeriod;;;;;;getFilterVa
 INVENTORY_DB;inventory.statusEntries.type.id;LONG;InventoryStatusType;;;;;;getFilterInventoryStatusTypes;;inventory.statusEntries.type.id;EQ, NE
 INVENTORY_DB;inventory.statusEntries.type.inventoryActive;BOOLEAN;;;;;;;;;inventory.statusEntries.type.inventoryActive;EQ, NE
 STAFF_DB;staff.id;LONG;;;;;;;;;staff.id;EQ, NE, TRUE
-STAFF_DB;staff.department.id;LONG;Department;;;;;;getFilterDepartments;;staff.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+STAFF_DB;staff.department.id;LONG;Department;;getName;;completeDepartment;ctsms.Department;;;staff.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
 STAFF_DB;staff.category.id;LONG;StaffCategory;;;;;;getFilterStaffCategories;;staff.category.id;EQ, NE
 STAFF_DB;staff.personParticulars.firstName;STRING;;;;;;;;;staff.personParticulars.firstName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 STAFF_DB;staff.personParticulars.lastName;STRING;;;;;;;;;staff.personParticulars.lastName;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
@@ -61,7 +61,7 @@ STAFF_DB;staff.dutyRosterTurns.start;STRING;VariablePeriod;;;;;;getFilterVariabl
 STAFF_DB;staff.dutyRosterTurns.stop;TIMESTAMP;;;;;;;;;staff.dutyRosterTurns.stop;EQ, NE, GT, GE, LT, LE
 STAFF_DB;staff.dutyRosterTurns.stop;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;staff.dutyRosterTurns.stopByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
 COURSE_DB;course.id;LONG;;;;;;;;;course.id;EQ, NE, TRUE
-COURSE_DB;course.department.id;LONG;Department;;;;;;getFilterDepartments;;course.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+COURSE_DB;course.department.id;LONG;Department;;getName;;completeDepartment;ctsms.Department;;;course.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
 COURSE_DB;course.category.id;LONG;CourseCategory;;;;;;getFilterCourseCategories;;course.category.id;EQ, NE
 COURSE_DB;course.trial.id;LONG;;;;;;;;TRIAL_DB;course.trial.id;EQ, NE
 COURSE_DB;course.name;STRING;;;;;;;;;course.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
@@ -81,7 +81,7 @@ COURSE_DB;course.precedingCourses;LONG;;;;;;;;;course.precedingCourses;IS_EMPTY,
 COURSE_DB;course.lecturers.staff.id;LONG;;;;;;;;STAFF_DB;course.lecturers.staff.id;EQ, NE, IS_EQ_CONTEXT_IDENTITY_ID
 COURSE_DB;course.lecturers;LONG;;;;;;;;;course.lecturers;IS_EMPTY, IS_NOT_EMPTY, SIZE_EQ, SIZE_NE, SIZE_GT, SIZE_GE, SIZE_LT, SIZE_LE
 TRIAL_DB;trial.id;LONG;;;;;;;;;trial.id;EQ, NE, TRUE
-TRIAL_DB;trial.department.id;LONG;Department;;;;;;getFilterDepartments;;trial.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+TRIAL_DB;trial.department.id;LONG;Department;;getName;;completeDepartment;ctsms.Department;;;trial.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
 TRIAL_DB;trial.name;STRING;;;;;;;;;trial.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 TRIAL_DB;trial.status.id;LONG;TrialStatusType;;;;;;getFilterTrialStatusTypes;;trial.status.id;EQ, NE
 TRIAL_DB;trial.type.id;LONG;TrialType;;;;;;getFilterTrialTypes;;trial.type.id;EQ, NE
@@ -127,7 +127,7 @@ INPUT_FIELD_DB;inputField.fieldType;STRING;InputFieldType;;;;;;getFilterInputFie
 INPUT_FIELD_DB;inputField.category;STRING;;;;;;;;;inputField.category;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 INPUT_FIELD_DB;inputField.deferredDelete;BOOLEAN;;;;;;;;;inputField.deferredDelete;EQ, NE
 PROBAND_DB;proband.id;LONG;;;;;;;;;proband.id;EQ, NE, TRUE
-PROBAND_DB;proband.department.id;LONG;Department;;;;;;getFilterDepartments;;proband.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+PROBAND_DB;proband.department.id;LONG;Department;;getName;;completeDepartment;ctsms.Department;;;proband.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
 PROBAND_DB;proband.category.id;LONG;ProbandCategory;;;;;;getFilterProbandCategories;;proband.category.id;EQ, NE
 PROBAND_DB;proband.personParticulars.firstNameHash;STRING_HASH;;;;;;;;;proband.personParticulars.firstNameHash;EQ, NE
 PROBAND_DB;proband.personParticulars.lastNameHash;STRING_HASH;;;;;;;;;proband.personParticulars.lastNameHash;EQ, NE
@@ -266,7 +266,7 @@ PROBAND_DB;proband.journalEntries.systemMessageCode;STRING;;;;;completeSystemMes
 PROBAND_DB;proband.journalEntries.modifiedTimestamp;TIMESTAMP;;;;;;;;;proband.journalEntries.modifiedTimestamp;EQ, NE, GT, GE, LT, LE
 PROBAND_DB;proband.journalEntries.modifiedTimestamp;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;proband.journalEntries.modifiedTimestampByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
 USER_DB;user.id;LONG;;;;;;;;;user.id;EQ, NE, TRUE
-USER_DB;user.department.id;LONG;Department;;;;;;getFilterDepartments;;user.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+USER_DB;user.department.id;LONG;Department;;getName;;completeDepartment;ctsms.Department;;;user.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
 USER_DB;user.name;STRING;;;;;;;;;user.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 USER_DB;user.locked;BOOLEAN;;;;;;;;;user.locked;EQ, NE
 USER_DB;user.lockedUntrusted;BOOLEAN;;;;;;;;;user.lockedUntrusted;EQ, NE
@@ -282,7 +282,7 @@ USER_DB;user.identity.id;LONG;;;;;;;;STAFF_DB;user.identity.id;EQ, NE
 USER_DB;user.identity.category.id;LONG;StaffCategory;;;;;;getFilterStaffCategories;;user.identity.category.id;EQ, NE
 USER_DB;user.authMethod;STRING;AuthenticationType;;;;;;getFilterAuthenticationTypes;;user.authMethod;EQ, NE
 MASS_MAIL_DB;massMail.id;LONG;;;;;;;;;massMail.id;EQ, NE, TRUE
-MASS_MAIL_DB;massMail.department.id;LONG;Department;;;;;;getFilterDepartments;;massMail.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
+MASS_MAIL_DB;massMail.department.id;LONG;Department;;getName;;completeDepartment;ctsms.Department;;;massMail.department.id;EQ, NE, IS_EQ_CONTEXT_USER_DEPARTMENT_ID
 MASS_MAIL_DB;massMail.name;STRING;;;;;;;;;massMail.name;EQ, NE, GT, GE, LT, LE, LIKE, ILIKE
 MASS_MAIL_DB;massMail.start;TIMESTAMP;;;;;;;;;massMail.start;EQ, NE, GT, GE, LT, LE
 MASS_MAIL_DB;massMail.start;STRING;VariablePeriod;;;;;;getFilterVariablePeriodsWoExplicit;;massMail.start.startByPeriod;IS_EQ_NOW, IS_NE_NOW, IS_GT_NOW, IS_GE_NOW, IS_LT_NOW, IS_LE_NOW, IS_GT_NOW_PLUS_PERIOD, IS_GE_NOW_PLUS_PERIOD, IS_EQ_NOW_PLUS_PERIOD, IS_NE_NOW_PLUS_PERIOD, IS_LT_NOW_PLUS_PERIOD, IS_LE_NOW_PLUS_PERIOD, IS_GT_NOW_MINUS_PERIOD, IS_GE_NOW_MINUS_PERIOD, IS_EQ_NOW_MINUS_PERIOD, IS_NE_NOW_MINUS_PERIOD, IS_LT_NOW_MINUS_PERIOD, IS_LE_NOW_MINUS_PERIOD
