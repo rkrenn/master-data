@@ -1339,7 +1339,7 @@ text/csv					csv
 # text/enriched
 # text/example
 text/html					html htm
-# text/javascript
+text/javascript					js
 text/n3						n3
 # text/parityfec
 text/plain					txt text conf def list log in
